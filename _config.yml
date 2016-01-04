@@ -1,0 +1,23 @@
+# Site settings
+title: Grande Portal
+header-img: img/matrix-code.jpg
+layout: post
+author: Régis da Silva Santos
+email: regis.santos.100@gmail.com
+description: "Blog sobre programação!"
+url: "http://grandeportal.github.io"
+twitter_username: rg3915
+github_username:  rg3915
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+mathjax: true
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","Gemfile","Gemfile.lock"]
+
+# Gems
+gems:
+  - jekyll-paginate
+  - kramdown

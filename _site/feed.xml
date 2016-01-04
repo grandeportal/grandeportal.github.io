@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grande Portal</title>
+    <description>Blog sobre programação!</description>
+    <link>http://grandeportal.github.io/</link>
+    <atom:link href="http://grandeportal.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 03 Jan 2016 23:58:43 -0200</pubDate>
+    <lastBuildDate>Sun, 03 Jan 2016 23:58:43 -0200</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>I Love Linux</title>
+        <description>&lt;p&gt;Um dia um professor, que é meu amigo até hoje, falou pra mim:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“Seja livre! Use Linux.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Foi difícil eu me desgrudar do Windows porque o &lt;em&gt;MS Excel&lt;/em&gt; é bom, isso é fato. Mas foi mais difícil ainda por causa do meu &lt;em&gt;Need For Speed&lt;/em&gt;. Então eu fiz um &lt;strong&gt;Dual boot&lt;/strong&gt;. Ou seja, não quer perder o Windows, mas quer usar um sistema operacional de verdade (calma, eu vim em paz)…&lt;/p&gt;
+
+&lt;p&gt;Eu não vou ensinar a fazer a instalação do Linux com dual boot porque tem um monte de tutorial por ai que ensina (não fiquem com raiva de mim), mas se tiverem alguma dúvida é só falar.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Importante: tenha uma imagem do Ubuntu num pen drive.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;porque-eu-uso-ubuntu0&quot;&gt;Porque eu uso &lt;a href=&quot;http://www.ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt;?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Ubuntu&lt;/strong&gt; é o mais popular das distros baseadas em &lt;em&gt;Debian&lt;/em&gt;. E tudo é fácil de instalar nele. Só o fato de você não precisar entrar de site em site em busca de drivers para isso ou aquilo já é uma grande vantagem.&lt;/p&gt;
+
+&lt;p&gt;Novamente, eu gosto de usar Linux porque para &lt;em&gt;desenvolvimento&lt;/em&gt; é muito mais fácil, rápido e simples de instalar programas, pacotes adicionais, isolar ambientes de desenvolvimento, simular máquinas, conexões, etc.&lt;/p&gt;
+
+&lt;p&gt;E é &lt;em&gt;open-source&lt;/em&gt;! :) Desenvolvedores adoram esse termo.&lt;/p&gt;
+
+&lt;p&gt;A partir da &lt;strong&gt;Central de Programas do Ubuntu&lt;/strong&gt; você pode instalar qualquer coisa.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/central.png&quot; alt=&quot;central.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ou a partir do &lt;strong&gt;terminal&lt;/strong&gt; com o comando&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;apt-get install nome_do_programa&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/animatrix.gif&quot; alt=&quot;animatrix.gif&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 03 Jan 2016 00:00:00 -0200</pubDate>
+        <link>http://grandeportal.github.io/2016/01/03/i-love-linux/</link>
+        <guid isPermaLink="true">http://grandeportal.github.io/2016/01/03/i-love-linux/</guid>
+        
+        <category>linux,</category>
+        
+        <category>ubuntu</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Comunidades e Eventos</title>
+        <description>&lt;p&gt;Desde 2015 eu venho participando de algumas comunidades e eventos bem interessantes.&lt;/p&gt;
+
+&lt;p&gt;Bom, acho que todo desenvolvedor conhece o &lt;a href=&quot;http://stackoverflow.com/&quot;&gt;stackoverflow.com&lt;/a&gt; e o &lt;a href=&quot;http://pt.stackoverflow.com/&quot;&gt;pt.stackoverflow.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Creio que alguns também conheçam as listas de discussão do Google:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://groups.google.com/forum/#!forum/python-brasil&quot;&gt;python-brasil&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://groups.google.com/forum/#!forum/django-brasil&quot;&gt;django-brasil&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;eventos&quot;&gt;Eventos&lt;/h2&gt;
+
+&lt;h3 id=&quot;python-brasil-20154&quot;&gt;&lt;a href=&quot;http://pythonbrasil.github.io/pythonbrasil11-site/&quot;&gt;Python Brasil 2015&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Edição de 2015 do maior evento da comunidade Python no Brasil.&lt;/p&gt;
+
+&lt;h3 id=&quot;meetup5&quot;&gt;&lt;a href=&quot;http://www.meetup.com/pt/&quot;&gt;Meetup&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;É um site que contém grupos que organizam eventos sobre diversos assuntos. Eu estou inscrito em:&lt;/p&gt;
+
+&lt;h4 id=&quot;grupy-sp6&quot;&gt;&lt;a href=&quot;http://www.meetup.com/pt/Grupy-SP/&quot;&gt;Grupy-SP&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Encontros mensais com palestras e &lt;em&gt;Lightning Talks&lt;/em&gt; sobre Python e afins.&lt;/p&gt;
+
+&lt;h4 id=&quot;dojo-sp7&quot;&gt;&lt;a href=&quot;http://www.meetup.com/pt/Dojo-SP/&quot;&gt;Dojo SP&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Quer por a mão no teclado e programar de verdade? Então você tem que participar de um &lt;strong&gt;Coding Dojo&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Veja se tem na sua cidade. Certamente existem em vários lugares.&lt;/p&gt;
+
+&lt;h4 id=&quot;pyladies-so-paulo8&quot;&gt;&lt;a href=&quot;http://www.meetup.com/pt/PyLadiesSP/&quot;&gt;PyLadies São Paulo&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Comunidade de programação de Python para mulheres. Participo como &lt;em&gt;monitor&lt;/em&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 02 Jan 2016 00:00:00 -0200</pubDate>
+        <link>http://grandeportal.github.io/2016/01/02/comunidades-eventos/</link>
+        <guid isPermaLink="true">http://grandeportal.github.io/2016/01/02/comunidades-eventos/</guid>
+        
+        <category>comunidade,</category>
+        
+        <category>evento</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Apresentação</title>
+        <description>&lt;h2 id=&quot;eu-em-frente-ao-espelho&quot;&gt;Eu em frente ao espelho&lt;/h2&gt;
+
+&lt;p&gt;Olá, meu nome é &lt;a href=&quot;https://about.me/rg3915&quot;&gt;Régis&lt;/a&gt;. Sou formado em Licenciatura em Matemática pela UFMT e em Análise e Desenvolvimento de Sistemas pelo Senac-SP.&lt;/p&gt;
+
+&lt;p&gt;Gosto muito de programação computacional. Já gostei de computação gráfica também.&lt;/p&gt;
+
+&lt;p&gt;Gosto de andar de bike! Deu até saudades do tempo em que eu pedalava de verdade, longas distâncias, e um pouco de adrenalina com velocidades altas.&lt;/p&gt;
+
+&lt;p&gt;Gosto de filmes de ação, aventura, super-heróis e esses mais famosos que todo mundo assiste e dá recordes de bilheteria.&lt;/p&gt;
+
+&lt;p&gt;Bom, eu me considero como &lt;em&gt;web developer&lt;/em&gt;, então vamos falar sobre isso.&lt;/p&gt;
+
+&lt;h2 id=&quot;o-objetivo-do-blog&quot;&gt;O objetivo do blog&lt;/h2&gt;
+
+&lt;p&gt;O nome do blog é &lt;strong&gt;Grande Portal&lt;/strong&gt; porque eu sempre me lembro de &lt;a href=&quot;http://www.fullmetalalchemist.com.au/&quot;&gt;Fullmetal Alchemist&lt;/a&gt;, uma série de mangá da hora!&lt;/p&gt;
+
+&lt;p&gt;Mas aqui eu irei falar exclusivamente de &lt;strong&gt;programação&lt;/strong&gt;! Dicas e tutoriais para desenvolvimento de atividades computacionais envolvendo programação.&lt;/p&gt;
+
+&lt;p&gt;Talvez eu fale de &lt;a href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt;, porque é a linguagem que eu mais gosto.&lt;/p&gt;
+
+&lt;p&gt;Talvez eu fale de &lt;a href=&quot;http://djangoproject.com/&quot;&gt;Django&lt;/a&gt;, porque é o framework que eu mais gosto.&lt;/p&gt;
+
+&lt;p&gt;Mas vou começar falando sobre como &lt;strong&gt;dominar o terminal&lt;/strong&gt; e criar uns &lt;strong&gt;scripts&lt;/strong&gt; da hora.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Leia mais:&lt;/strong&gt; Veja também alguns posts que eu escrevi em &lt;a href=&quot;http://pythonclub.com.br/author/regis-da-silva.html&quot;&gt;PythonClub.com.br&lt;/a&gt; e algumas dicas no meu &lt;a href=&quot;https://gist.github.com/rg3915/&quot;&gt;Gist&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;sal&quot;&gt;SAL&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Serviço de Atendimento ao Leitor&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Aceito sugestões, críticas, elogios, dúvidas, presentes, etc.&lt;/p&gt;
+
+&lt;p&gt;Espero que gostem!&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 01 Jan 2016 00:00:00 -0200</pubDate>
+        <link>http://grandeportal.github.io/2016/01/01/apresentacao/</link>
+        <guid isPermaLink="true">http://grandeportal.github.io/2016/01/01/apresentacao/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
