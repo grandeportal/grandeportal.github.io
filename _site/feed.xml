@@ -5,9 +5,48 @@
     <description>Blog sobre programação!</description>
     <link>http://grandeportal.github.io/</link>
     <atom:link href="http://grandeportal.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 04 Jan 2016 01:37:06 -0200</pubDate>
-    <lastBuildDate>Mon, 04 Jan 2016 01:37:06 -0200</lastBuildDate>
+    <pubDate>Mon, 04 Jan 2016 04:53:37 -0200</pubDate>
+    <lastBuildDate>Mon, 04 Jan 2016 04:53:37 -0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Recuperando o GRUB</title>
+        <description>&lt;p&gt;Quando você faz a instalação do Ubuntu usando &lt;strong&gt;dual boot&lt;/strong&gt;…&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Instale primeiro o Windows&lt;/li&gt;
+  &lt;li&gt;Depois instale o Ubuntu&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;… você terá uma tela parecida com essa. O famoso &lt;strong&gt;GRUB&lt;/strong&gt;, onde você escolhe qual SO você quer inicializar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/post-bg-grub.png&quot; alt=&quot;animatrix.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mas e no dia que dá pau no computador e você não consegue inicializar o GRUB? Calma, não precisa se desesperar e jogar o computador no lixo.&lt;/p&gt;
+
+&lt;p&gt;Faça o seguinte:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pegue o pen drive com a imagem do seu Ubuntu.&lt;/li&gt;
+  &lt;li&gt;Rode o Ubuntu em modo Live-CD.&lt;/li&gt;
+  &lt;li&gt;Abra o terminal (CTRL+ALT+T)&lt;/li&gt;
+  &lt;li&gt;e digite&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo fdisk -l
+sudo mount -t ext4 /dev/sda6 /mnt
+sudo grub-install --root-directory&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/mnt /dev/sda&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; no meu caso &lt;em&gt;sda6&lt;/em&gt; é a minha partição, talvez na sua seja diferente.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 04 Jan 2016 00:00:00 -0200</pubDate>
+        <link>http://grandeportal.github.io/2016/01/04/recuperando-o-grub/</link>
+        <guid isPermaLink="true">http://grandeportal.github.io/2016/01/04/recuperando-o-grub/</guid>
+        
+        <category>grub</category>
+        
+        
+      </item>
     
       <item>
         <title>I Love Linux</title>
