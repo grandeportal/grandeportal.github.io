@@ -12,7 +12,7 @@ Quando você faz a instalação do Ubuntu usando **dual boot**...
 
 ... você terá uma tela parecida com essa. O famoso **GRUB**, onde você escolhe qual SO você quer inicializar.
 
-<img src="{{ site.baseurl }}/img/posts/post-bg-grub.png" alt="animatrix.gif">
+<img src="{{ site.baseurl }}/img/posts/post-bg-grub.png" alt="post-bg-grub.png">
 
 Mas e no dia que dá pau no computador e você não consegue inicializar o GRUB? Calma, não precisa se desesperar e jogar o computador no lixo.
 

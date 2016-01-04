@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Blog sobre programação!">
 
-    <title>Recuperando o GRUB - Grande Portal</title>
+    <title>Grande Portal</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/img/regismatrix.gif">
 
 
-    <link rel="canonical" href="http://grandeportal.github.io/2016/01/04/recuperando-o-grub/">
+    <link rel="canonical" href="http://grandeportal.github.io/page2/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -82,71 +82,56 @@
 </nav>
 
 
-    <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/posts/post-bg-grub2.png')">
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/img/matrix-code.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <h1>Recuperando o GRUB</h1>
-                    
-                    <span class="meta">Postado por Régis da Silva Santos on January 4, 2016</span>
+                <div class="site-heading">
+                    <h1>Grande Portal</h1>
+                    <hr class="small">
+                    <span class="subheading">Blog sobre programação</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			
+<div class="post-preview">
+    <a href="/2016/01/01/apresentacao/">
+        <h2 class="post-title">            Apresentação
+        </h2>
+        
+        <h3 class="post-subtitle">
+            Eu e o Objetivo desse Blog
+        </h3>
+        
+    </a>
+    <p class="post-meta">Postado por Régis da Silva Santos em January 1, 2016</p>
+</div>
+<hr>
 
-				<p>Quando você faz a instalação do Ubuntu usando <strong>dual boot</strong>…</p>
 
-<ol>
-  <li>Instale primeiro o Windows</li>
-  <li>Depois instale o Ubuntu</li>
-</ol>
+<!-- Pager -->
 
-<p>… você terá uma tela parecida com essa. O famoso <strong>GRUB</strong>, onde você escolhe qual SO você quer inicializar.</p>
-
-<p><img src="/img/posts/post-bg-grub.png" alt="post-bg-grub.png" /></p>
-
-<p>Mas e no dia que dá pau no computador e você não consegue inicializar o GRUB? Calma, não precisa se desesperar e jogar o computador no lixo.</p>
-
-<p>Faça o seguinte:</p>
-
-<ul>
-  <li>Pegue o pen drive com a imagem do seu Ubuntu.</li>
-  <li>Rode o Ubuntu em modo Live-CD.</li>
-  <li>Abra o terminal (CTRL+ALT+T)</li>
-  <li>e digite</li>
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/">&larr; Newer Posts</a>
+    </li>
+    
+    
 </ul>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo fdisk -l
-sudo mount -t ext4 /dev/sda6 /mnt
-sudo grub-install --root-directory<span class="o">=</span>/mnt /dev/sda</code></pre></figure>
 
-<p><strong>Nota:</strong> no meu caso <em>sda6</em> é a minha partição, talvez na sua seja diferente.</p>
-
-
-                <hr>
-
-                <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2016/01/03/i-love-linux/" data-toggle="tooltip" data-placement="top" title="I Love Linux"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
-                    </li>
-                    
-                    
-                </ul>
-
-            </div>
-        </div>
-    </div>
-</article>
+		</div>
+	</div>
+</div>
 
 <hr>
 

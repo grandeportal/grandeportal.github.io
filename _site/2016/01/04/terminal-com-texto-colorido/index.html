@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Blog sobre programação!">
 
-    <title>Recuperando o GRUB - Grande Portal</title>
+    <title>Terminal com Texto Colorido - Grande Portal</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/img/regismatrix.gif">
 
 
-    <link rel="canonical" href="http://grandeportal.github.io/2016/01/04/recuperando-o-grub/">
+    <link rel="canonical" href="http://grandeportal.github.io/2016/01/04/terminal-com-texto-colorido/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -83,12 +83,12 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/posts/post-bg-grub2.png')">
+<header class="intro-header" style="background-image: url('/img/posts/post-bg-terminal-color.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Recuperando o GRUB</h1>
+                    <h1>Terminal com Texto Colorido</h1>
                     
                     <span class="meta">Postado por Régis da Silva Santos on January 4, 2016</span>
                 </div>
@@ -103,33 +103,19 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<p>Quando você faz a instalação do Ubuntu usando <strong>dual boot</strong>…</p>
+				<p>Para deixar o terminal com texto colorido digite</p>
 
-<ol>
-  <li>Instale primeiro o Windows</li>
-  <li>Depois instale o Ubuntu</li>
-</ol>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gedit ~/.bashrc</code></pre></figure>
 
-<p>… você terá uma tela parecida com essa. O famoso <strong>GRUB</strong>, onde você escolhe qual SO você quer inicializar.</p>
+<p>Procure pela linha (46) que contém o texto</p>
 
-<p><img src="/img/posts/post-bg-grub.png" alt="post-bg-grub.png" /></p>
+<figure class="highlight"><pre><code class="language-vim" data-lang="vim">#force_color_prompt<span class="p">=</span>yes</code></pre></figure>
 
-<p>Mas e no dia que dá pau no computador e você não consegue inicializar o GRUB? Calma, não precisa se desesperar e jogar o computador no lixo.</p>
+<p>Basta tirar o símbolo <code class="highlighter-rouge">#</code>. Salvar e fechar.</p>
 
-<p>Faça o seguinte:</p>
+<p><img src="/img/posts/terminal-text-color.png" alt="terminal-text-color.png" /></p>
 
-<ul>
-  <li>Pegue o pen drive com a imagem do seu Ubuntu.</li>
-  <li>Rode o Ubuntu em modo Live-CD.</li>
-  <li>Abra o terminal (CTRL+ALT+T)</li>
-  <li>e digite</li>
-</ul>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo fdisk -l
-sudo mount -t ext4 /dev/sda6 /mnt
-sudo grub-install --root-directory<span class="o">=</span>/mnt /dev/sda</code></pre></figure>
-
-<p><strong>Nota:</strong> no meu caso <em>sda6</em> é a minha partição, talvez na sua seja diferente.</p>
+<p><strong>Nota:</strong> é necessário fechar o terminal e abrir novamente.</p>
 
 
                 <hr>
@@ -137,7 +123,7 @@ sudo grub-install --root-directory<span class="o">=</span>/mnt /dev/sda</code></
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2016/01/03/i-love-linux/" data-toggle="tooltip" data-placement="top" title="I Love Linux"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
+                        <a href="/2016/01/04/recuperando-o-grub/" data-toggle="tooltip" data-placement="top" title="Recuperando o GRUB"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
                     </li>
                     
                     

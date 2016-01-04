@@ -5,8 +5,8 @@
     <description>Blog sobre programação!</description>
     <link>http://grandeportal.github.io/</link>
     <atom:link href="http://grandeportal.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 04 Jan 2016 04:53:37 -0200</pubDate>
-    <lastBuildDate>Mon, 04 Jan 2016 04:53:37 -0200</lastBuildDate>
+    <pubDate>Mon, 04 Jan 2016 07:01:20 -0200</pubDate>
+    <lastBuildDate>Mon, 04 Jan 2016 07:01:20 -0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -20,7 +20,7 @@
 
 &lt;p&gt;… você terá uma tela parecida com essa. O famoso &lt;strong&gt;GRUB&lt;/strong&gt;, onde você escolhe qual SO você quer inicializar.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/posts/post-bg-grub.png&quot; alt=&quot;animatrix.gif&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/posts/post-bg-grub.png&quot; alt=&quot;post-bg-grub.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Mas e no dia que dá pau no computador e você não consegue inicializar o GRUB? Calma, não precisa se desesperar e jogar o computador no lixo.&lt;/p&gt;
 
