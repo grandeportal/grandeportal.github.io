@@ -12,44 +12,31 @@ Neste exemplo vou editar somente o `timeout` para 5 seg.
 > Faça um **backup** do grub. Senão já era.
 
 {% highlight bash %}
-cp /boot/grub/grub.cfg /boot/grub/grub_ori.cfg
-gedit /boot/grub/grub.cfg
+cp /etc/default/grub /etc/default/grub_ori
+sudo gedit /etc/default/grub
 {% endhighlight %}
 
-No meu caso, eu vou editar as linhas 90 e 94.
 
 **Antes**
 
 {% highlight vim %}
-if [ "${recordfail}" = 1 ] ; then
-  set timeout=30
-else
-  if [ x$feature_timeout_style = xy ] ; then
-    set timeout_style=menu
-    set timeout=10
-  # Fallback normal timeout code in case the timeout_style feature is
-  # unavailable.
-  else
-    set timeout=10
-  fi
-fi
+GRUB_TIMEOUT=10
 {% endhighlight %}
 
 **Depois**
 
 {% highlight vim %}
-if [ "${recordfail}" = 1 ] ; then
-  set timeout=30
-else
-  if [ x$feature_timeout_style = xy ] ; then
-    set timeout_style=menu
-    set timeout=5 # mudei aqui
-  # Fallback normal timeout code in case the timeout_style feature is
-  # unavailable.
-  else
-    set timeout=5 # e aqui
-  fi
-fi
+GRUB_TIMEOUT=5
+{% endhighlight %}
+
+Salva e fecha. E no terminal digite
+
+{% highlight bash %}
+sudo update-grub
 {% endhighlight %}
 
 Pronto!
+
+<img src="{{ site.baseurl }}/img/posts/grub-update.png" alt="grub-update.png">
+
+**Fonte:** [how-to-configure-the-grub2-boot-loaders-settings](http://www.howtogeek.com/196655/how-to-configure-the-grub2-boot-loaders-settings/)

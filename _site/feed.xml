@@ -5,9 +5,49 @@
     <description>Blog sobre programação!</description>
     <link>http://grandeportal.github.io/</link>
     <atom:link href="http://grandeportal.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 04 Jan 2016 07:01:20 -0200</pubDate>
-    <lastBuildDate>Mon, 04 Jan 2016 07:01:20 -0200</lastBuildDate>
+    <pubDate>Tue, 05 Jan 2016 05:11:51 -0200</pubDate>
+    <lastBuildDate>Tue, 05 Jan 2016 05:11:51 -0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Editando o GRUB</title>
+        <description>&lt;p&gt;&lt;strong&gt;Cuidado:&lt;/strong&gt; Não é muito bom editar o GRUB, mas de vez em quando a gente precisa.&lt;/p&gt;
+
+&lt;p&gt;Neste exemplo vou editar somente o &lt;code class=&quot;highlighter-rouge&quot;&gt;timeout&lt;/code&gt; para 5 seg.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Faça um &lt;strong&gt;backup&lt;/strong&gt; do grub. Senão já era.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;cp /etc/default/grub /etc/default/grub_ori
+sudo gedit /etc/default/grub&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Antes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;GRUB_TIMEOUT&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Depois&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;GRUB_TIMEOUT&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Salva e fecha. E no terminal digite&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo update-grub&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Pronto!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/grub-update.png&quot; alt=&quot;grub-update.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fonte:&lt;/strong&gt; &lt;a href=&quot;http://www.howtogeek.com/196655/how-to-configure-the-grub2-boot-loaders-settings/&quot;&gt;how-to-configure-the-grub2-boot-loaders-settings&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Jan 2016 00:00:00 -0200</pubDate>
+        <link>http://grandeportal.github.io/2016/01/05/editando-o-grub/</link>
+        <guid isPermaLink="true">http://grandeportal.github.io/2016/01/05/editando-o-grub/</guid>
+        
+        <category>grub</category>
+        
+        
+      </item>
     
       <item>
         <title>Recuperando o GRUB</title>
@@ -26,24 +66,143 @@
 
 &lt;p&gt;Faça o seguinte:&lt;/p&gt;
 
+&lt;p&gt;Inicie um &lt;strong&gt;Live-CD&lt;/strong&gt; ou &lt;strong&gt;Live-USB&lt;/strong&gt; com a mesma arquitetura do Linux que estava instalado, ou seja, se o Linux instalado for 64 Bits, use Live-CD ou Live-USB 64bits, se o Linux instalado for 32bits use Live-CD ou Live-USB 32bits.&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Pegue o pen drive com a imagem do seu Ubuntu.&lt;/li&gt;
-  &lt;li&gt;Rode o Ubuntu em modo Live-CD.&lt;/li&gt;
-  &lt;li&gt;Abra o terminal (CTRL+ALT+T)&lt;/li&gt;
+  &lt;li&gt;Abra o &lt;strong&gt;terminal&lt;/strong&gt; (CTRL+ALT+T)&lt;/li&gt;
   &lt;li&gt;e digite&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo fdisk -l
-sudo mount -t ext4 /dev/sda6 /mnt
-sudo grub-install --root-directory&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/mnt /dev/sda&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo su&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; no meu caso &lt;em&gt;sda6&lt;/em&gt; é a minha partição, talvez na sua seja diferente.&lt;/p&gt;
+&lt;p&gt;Veja qual partição está instalada o seu Linux&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;lsblk&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/lsblk.png&quot; alt=&quot;lsblk.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Crie uma pasta para ser o ponto de montagem&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir hd&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Monte a partição que tem o Linux&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mount /dev/sda3 hd/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; no meu caso &lt;em&gt;sda3&lt;/em&gt; é a minha partição Linux, talvez na sua seja diferente.&lt;/p&gt;
+
+&lt;p&gt;Vincule temporariamente os dispositivos e processos ativados atualmente pelo Live-CD no Linux que está instalado.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mount --bind /dev/ hd/dev
+mount --bind /proc/ hd/proc
+mount --bind /sys/ hd/sys&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Mude temporariamente a referência ao &lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt; para dentro da pasta&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;chroot hd/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Reinstale o GRUB utilizando o próprio sistema instalado no hd&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;grub-install /dev/sda
+update-grub
+&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Desmonte todas as partições&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;umount -a&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Reinicie o sistema&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;reboot&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Agradecimentos ao meu amigo &lt;a href=&quot;https://gist.github.com/luzfcb/69ed9391290952a1f881&quot;&gt;Fábio&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Mon, 04 Jan 2016 00:00:00 -0200</pubDate>
         <link>http://grandeportal.github.io/2016/01/04/recuperando-o-grub/</link>
         <guid isPermaLink="true">http://grandeportal.github.io/2016/01/04/recuperando-o-grub/</guid>
         
         <category>grub</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Alterando o Prompt do Terminal</title>
+        <description>&lt;p&gt;Vejamos aqui como alterar o prompt do terminal.&lt;/p&gt;
+
+&lt;h4 id=&quot;o-mnimo&quot;&gt;O mínimo&lt;/h4&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;PS1=&quot;$ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ps01.png&quot; alt=&quot;ps01.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;username-o-nome-do-usurio&quot;&gt;&lt;em&gt;Username&lt;/em&gt;: O nome do usuário&lt;/h5&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;PS1=&quot;\u$ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h5 id=&quot;hostname-o-nome-da-mquina&quot;&gt;&lt;em&gt;Hostname&lt;/em&gt;: O nome da máquina&lt;/h5&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;PS1=&quot;\h$ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h5 id=&quot;full-path-o-caminho-completo-do-diretrio-atual&quot;&gt;&lt;em&gt;Full Path&lt;/em&gt;: O caminho completo do diretório atual&lt;/h5&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;PS1=&quot;\w$ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;refazendo-o-prompt-padro&quot;&gt;Refazendo o prompt padrão&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-vim&quot; data-lang=&quot;vim&quot;&gt;PS1&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;$ &quot;&lt;/span&gt;
+PS1&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\u$ &quot;&lt;/span&gt;
+PS1&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\u@\h$ &quot;&lt;/span&gt;
+PS1&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;\u@\h:\w$ &quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ps-anim.gif&quot; alt=&quot;ps-anim.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cores&quot;&gt;Cores&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;\e[&lt;/code&gt; indica o começo da cor no prompt.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;x;ym&lt;/code&gt; indica o código da cor.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;\e[m&lt;/code&gt; indica o fim da cor no prompt.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;PS1=&quot;\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ps02.png&quot; alt=&quot;ps02.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;diminuindo-o-caminho-do-prompt&quot;&gt;Diminuindo o caminho do prompt&lt;/h3&gt;
+
+&lt;p&gt;Eu gosto de deixar o meu prompt com um caminho mais curto, então eu digito:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;PS1=&quot;\e[1;34m:/\W\e[00m$ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ps03.png&quot; alt=&quot;ps03.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;horas&quot;&gt;Horas&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\u&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\h&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; [&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;(date +%k:%M:%S)]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;ou&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\u&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\h&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; [&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/posts/ps04.png&quot; alt=&quot;ps04.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;referncias&quot;&gt;Referências&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://bashrcgenerator.com/&quot;&gt;Bashrc Generator&lt;/a&gt; te ajuda a montar o seu comando. Experimente!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/Color_Bash_Prompt&quot;&gt;Color Bash Prompt&lt;/a&gt; - tabela de cores.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 04 Jan 2016 00:00:00 -0200</pubDate>
+        <link>http://grandeportal.github.io/2016/01/04/8-alterando-o-prompt-do-terminal/</link>
+        <guid isPermaLink="true">http://grandeportal.github.io/2016/01/04/8-alterando-o-prompt-do-terminal/</guid>
+        
+        <category>terminal</category>
         
         
       </item>

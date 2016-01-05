@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Blog sobre programação!">
 
-    <title>I Love Linux - Grande Portal</title>
+    <title>Alterando o Prompt do Terminal - Grande Portal</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/img/regismatrix.gif">
 
 
-    <link rel="canonical" href="http://grandeportal.github.io/2016/01/03/i-love-linux/">
+    <link rel="canonical" href="http://grandeportal.github.io/2016/01/04/8-alterando-o-prompt-do-terminal/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -83,14 +83,14 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/posts/post-bg-03.png')">
+<header class="intro-header" style="background-image: url('/img/posts/post-bg-prompt.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>I Love Linux</h1>
+                    <h1>Alterando o Prompt do Terminal</h1>
                     
-                    <span class="meta">Postado por Régis da Silva Santos on January 3, 2016</span>
+                    <span class="meta">Postado por Régis da Silva Santos on January 4, 2016</span>
                 </div>
             </div>
         </div>
@@ -103,36 +103,75 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<p>Um dia um professor, que é meu amigo até hoje, falou pra mim:</p>
+				<p>Vejamos aqui como alterar o prompt do terminal.</p>
 
-<p><em>“Seja livre! Use Linux.”</em></p>
+<h4 id="o-mnimo">O mínimo</h4>
 
-<p>Foi difícil eu me desgrudar do Windows porque o <em>MS Excel</em> é bom, isso é fato. Mas foi mais difícil ainda por causa do meu <em>Need For Speed</em>. Então eu fiz um <strong>Dual boot</strong>. Ou seja, não quer perder o Windows, mas quer usar um sistema operacional de verdade (calma, eu vim em paz)…</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">PS1="$ </span><span class="s2">"</span></code></pre></figure>
 
-<p>Eu não vou ensinar a fazer a instalação do Linux com dual boot porque tem um monte de tutorial por ai que ensina (não fiquem com raiva de mim), mas se tiverem alguma dúvida é só falar.</p>
+<p><img src="/img/posts/ps01.png" alt="ps01.png" /></p>
 
-<blockquote>
-  <p>Importante: tenha uma imagem do Ubuntu num pen drive.</p>
-</blockquote>
+<h5 id="username-o-nome-do-usurio"><em>Username</em>: O nome do usuário</h5>
 
-<h2 id="porque-eu-uso-ubuntu0">Porque eu uso <a href="http://www.ubuntu.com/">Ubuntu</a>?</h2>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">PS1="\u$ </span><span class="s2">"</span></code></pre></figure>
 
-<p><strong>Ubuntu</strong> é o mais popular das distros baseadas em <em>Debian</em>. E tudo é fácil de instalar nele. Só o fato de você não precisar entrar de site em site em busca de drivers para isso ou aquilo já é uma grande vantagem.</p>
+<h5 id="hostname-o-nome-da-mquina"><em>Hostname</em>: O nome da máquina</h5>
 
-<p>Novamente, eu gosto de usar Linux porque para <em>desenvolvimento</em> é muito mais fácil, rápido e simples de instalar programas, pacotes adicionais, isolar ambientes de desenvolvimento, simular máquinas, conexões, etc.</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">PS1="\h$ </span><span class="s2">"</span></code></pre></figure>
 
-<p>E é <em>open-source</em>! :) Desenvolvedores adoram esse termo.</p>
+<h5 id="full-path-o-caminho-completo-do-diretrio-atual"><em>Full Path</em>: O caminho completo do diretório atual</h5>
 
-<p>A partir da <strong>Central de Programas do Ubuntu</strong> você pode instalar qualquer coisa.</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">PS1="\w$ </span><span class="s2">"</span></code></pre></figure>
 
-<p><img src="/img/posts/central.png" alt="central.png" /></p>
+<h3 id="refazendo-o-prompt-padro">Refazendo o prompt padrão</h3>
 
-<p>Ou a partir do <strong>terminal</strong> com o comando</p>
+<figure class="highlight"><pre><code class="language-vim" data-lang="vim">PS1<span class="p">=</span><span class="s2">"$ "</span>
+PS1<span class="p">=</span><span class="s2">"\u$ "</span>
+PS1<span class="p">=</span><span class="s2">"\u@\h$ "</span>
+PS1<span class="p">=</span><span class="s2">"\u@\h:\w$ "</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">apt-get install nome_do_programa</code></pre></figure>
+<p><img src="/img/posts/ps-anim.gif" alt="ps-anim.gif" /></p>
 
-<p><img src="/img/posts/animatrix.gif" alt="animatrix.gif" /></p>
+<h3 id="cores">Cores</h3>
 
+<p><code class="highlighter-rouge">\e[</code> indica o começo da cor no prompt.</p>
+
+<p><code class="highlighter-rouge">x;ym</code> indica o código da cor.</p>
+
+<p><code class="highlighter-rouge">\e[m</code> indica o fim da cor no prompt.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">PS1="\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ </span><span class="s2">"</span></code></pre></figure>
+
+<p><img src="/img/posts/ps02.png" alt="ps02.png" /></p>
+
+<h3 id="diminuindo-o-caminho-do-prompt">Diminuindo o caminho do prompt</h3>
+
+<p>Eu gosto de deixar o meu prompt com um caminho mais curto, então eu digito:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">PS1="\e[1;34m:/\W\e[00m$ </span><span class="s2">"</span></code></pre></figure>
+
+<p><img src="/img/posts/ps03.png" alt="ps03.png" /></p>
+
+<h3 id="horas">Horas</h3>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">PS1</span><span class="o">=</span><span class="s2">"</span><span class="se">\u</span><span class="s2">@</span><span class="se">\h</span><span class="s2"> [</span><span class="se">\$</span><span class="s2">(date +%k:%M:%S)]</span><span class="nv">$ </span><span class="s2">"</span></code></pre></figure>
+
+<p>ou</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">PS1</span><span class="o">=</span><span class="s2">"</span><span class="se">\u</span><span class="s2">@</span><span class="se">\h</span><span class="s2"> [</span><span class="se">\t</span><span class="s2">]</span><span class="nv">$ </span><span class="s2">"</span></code></pre></figure>
+
+<p><img src="/img/posts/ps04.png" alt="ps04.png" /></p>
+
+<h3 id="referncias">Referências</h3>
+
+<ul>
+  <li>
+    <p><a href="http://bashrcgenerator.com/">Bashrc Generator</a> te ajuda a montar o seu comando. Experimente!</p>
+  </li>
+  <li>
+    <p><a href="https://wiki.archlinux.org/index.php/Color_Bash_Prompt">Color Bash Prompt</a> - tabela de cores.</p>
+  </li>
+</ul>
 
 
                 <hr>
@@ -140,12 +179,12 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2016/01/02/comunidades-eventos/" data-toggle="tooltip" data-placement="top" title="Comunidades e Eventos"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
+                        <a href="/2016/01/03/i-love-linux/" data-toggle="tooltip" data-placement="top" title="I Love Linux"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2016/01/04/8-alterando-o-prompt-do-terminal/" data-toggle="tooltip" data-placement="top" title="Alterando o Prompt do Terminal">Próximo <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a href="/2016/01/04/recuperando-o-grub/" data-toggle="tooltip" data-placement="top" title="Recuperando o GRUB">Próximo <span class="glyphicon glyphicon-chevron-right"></span></a>
                     </li>
                     
                 </ul>

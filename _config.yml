@@ -13,7 +13,7 @@ github_username:  rg3915
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-paginate: 5
+paginate: 7
 mathjax: true
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","Gemfile","Gemfile.lock"]
 

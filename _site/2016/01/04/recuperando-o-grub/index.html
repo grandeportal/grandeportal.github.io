@@ -118,18 +118,56 @@
 
 <p>Faça o seguinte:</p>
 
+<p>Inicie um <strong>Live-CD</strong> ou <strong>Live-USB</strong> com a mesma arquitetura do Linux que estava instalado, ou seja, se o Linux instalado for 64 Bits, use Live-CD ou Live-USB 64bits, se o Linux instalado for 32bits use Live-CD ou Live-USB 32bits.</p>
+
 <ul>
-  <li>Pegue o pen drive com a imagem do seu Ubuntu.</li>
-  <li>Rode o Ubuntu em modo Live-CD.</li>
-  <li>Abra o terminal (CTRL+ALT+T)</li>
+  <li>Abra o <strong>terminal</strong> (CTRL+ALT+T)</li>
   <li>e digite</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo fdisk -l
-sudo mount -t ext4 /dev/sda6 /mnt
-sudo grub-install --root-directory<span class="o">=</span>/mnt /dev/sda</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo su</code></pre></figure>
 
-<p><strong>Nota:</strong> no meu caso <em>sda6</em> é a minha partição, talvez na sua seja diferente.</p>
+<p>Veja qual partição está instalada o seu Linux</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">lsblk</code></pre></figure>
+
+<p><img src="/img/posts/lsblk.png" alt="lsblk.png" /></p>
+
+<p>Crie uma pasta para ser o ponto de montagem</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir hd</code></pre></figure>
+
+<p>Monte a partição que tem o Linux</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mount /dev/sda3 hd/</code></pre></figure>
+
+<p><strong>Nota:</strong> no meu caso <em>sda3</em> é a minha partição Linux, talvez na sua seja diferente.</p>
+
+<p>Vincule temporariamente os dispositivos e processos ativados atualmente pelo Live-CD no Linux que está instalado.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mount --bind /dev/ hd/dev
+mount --bind /proc/ hd/proc
+mount --bind /sys/ hd/sys</code></pre></figure>
+
+<p>Mude temporariamente a referência ao <code class="highlighter-rouge">/</code> para dentro da pasta</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">chroot hd/</code></pre></figure>
+
+<p>Reinstale o GRUB utilizando o próprio sistema instalado no hd</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">grub-install /dev/sda
+update-grub
+<span class="nb">exit</span></code></pre></figure>
+
+<p>Desmonte todas as partições</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">umount -a</code></pre></figure>
+
+<p>Reinicie o sistema</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">reboot</code></pre></figure>
+
+<p>Agradecimentos ao meu amigo <a href="https://gist.github.com/luzfcb/69ed9391290952a1f881">Fábio</a>.</p>
 
 
                 <hr>
@@ -137,9 +175,13 @@ sudo grub-install --root-directory<span class="o">=</span>/mnt /dev/sda</code></
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2016/01/03/i-love-linux/" data-toggle="tooltip" data-placement="top" title="I Love Linux"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
+                        <a href="/2016/01/04/8-alterando-o-prompt-do-terminal/" data-toggle="tooltip" data-placement="top" title="Alterando o Prompt do Terminal"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
                     </li>
                     
+                    
+                    <li class="next">
+                        <a href="/2016/01/05/editando-o-grub/" data-toggle="tooltip" data-placement="top" title="Editando o GRUB">Próximo <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </li>
                     
                 </ul>
 

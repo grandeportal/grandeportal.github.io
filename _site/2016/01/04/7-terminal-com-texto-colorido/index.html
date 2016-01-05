@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Blog sobre programação!">
 
-    <title>I Love Linux - Grande Portal</title>
+    <title>Terminal com Texto Colorido - Grande Portal</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/img/regismatrix.gif">
 
 
-    <link rel="canonical" href="http://grandeportal.github.io/2016/01/03/i-love-linux/">
+    <link rel="canonical" href="http://grandeportal.github.io/2016/01/04/7-terminal-com-texto-colorido/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -83,14 +83,14 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/posts/post-bg-03.png')">
+<header class="intro-header" style="background-image: url('/img/posts/post-bg-terminal-color.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>I Love Linux</h1>
+                    <h1>Terminal com Texto Colorido</h1>
                     
-                    <span class="meta">Postado por Régis da Silva Santos on January 3, 2016</span>
+                    <span class="meta">Postado por Régis da Silva Santos on January 4, 2016</span>
                 </div>
             </div>
         </div>
@@ -103,36 +103,19 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<p>Um dia um professor, que é meu amigo até hoje, falou pra mim:</p>
+				<p>Para deixar o terminal com texto colorido digite</p>
 
-<p><em>“Seja livre! Use Linux.”</em></p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo gedit ~/.bashrc</code></pre></figure>
 
-<p>Foi difícil eu me desgrudar do Windows porque o <em>MS Excel</em> é bom, isso é fato. Mas foi mais difícil ainda por causa do meu <em>Need For Speed</em>. Então eu fiz um <strong>Dual boot</strong>. Ou seja, não quer perder o Windows, mas quer usar um sistema operacional de verdade (calma, eu vim em paz)…</p>
+<p>Procure pela linha (46) que contém o texto</p>
 
-<p>Eu não vou ensinar a fazer a instalação do Linux com dual boot porque tem um monte de tutorial por ai que ensina (não fiquem com raiva de mim), mas se tiverem alguma dúvida é só falar.</p>
+<figure class="highlight"><pre><code class="language-vim" data-lang="vim">#force_color_prompt<span class="p">=</span>yes</code></pre></figure>
 
-<blockquote>
-  <p>Importante: tenha uma imagem do Ubuntu num pen drive.</p>
-</blockquote>
+<p>Basta tirar o símbolo <code class="highlighter-rouge">#</code>. Salvar e fechar.</p>
 
-<h2 id="porque-eu-uso-ubuntu0">Porque eu uso <a href="http://www.ubuntu.com/">Ubuntu</a>?</h2>
+<p><img src="/img/posts/terminal-text-color.png" alt="terminal-text-color.png" /></p>
 
-<p><strong>Ubuntu</strong> é o mais popular das distros baseadas em <em>Debian</em>. E tudo é fácil de instalar nele. Só o fato de você não precisar entrar de site em site em busca de drivers para isso ou aquilo já é uma grande vantagem.</p>
-
-<p>Novamente, eu gosto de usar Linux porque para <em>desenvolvimento</em> é muito mais fácil, rápido e simples de instalar programas, pacotes adicionais, isolar ambientes de desenvolvimento, simular máquinas, conexões, etc.</p>
-
-<p>E é <em>open-source</em>! :) Desenvolvedores adoram esse termo.</p>
-
-<p>A partir da <strong>Central de Programas do Ubuntu</strong> você pode instalar qualquer coisa.</p>
-
-<p><img src="/img/posts/central.png" alt="central.png" /></p>
-
-<p>Ou a partir do <strong>terminal</strong> com o comando</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">apt-get install nome_do_programa</code></pre></figure>
-
-<p><img src="/img/posts/animatrix.gif" alt="animatrix.gif" /></p>
-
+<p><strong>Nota:</strong> é necessário fechar o terminal e abrir novamente.</p>
 
 
                 <hr>
@@ -140,7 +123,7 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2016/01/02/comunidades-eventos/" data-toggle="tooltip" data-placement="top" title="Comunidades e Eventos"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
+                        <a href="/2016/01/03/i-love-linux/" data-toggle="tooltip" data-placement="top" title="I Love Linux"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
                     </li>
                     
                     

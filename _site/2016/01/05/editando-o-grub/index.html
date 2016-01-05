@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Blog sobre programação!">
 
-    <title>I Love Linux - Grande Portal</title>
+    <title>Editando o GRUB - Grande Portal</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/img/regismatrix.gif">
 
 
-    <link rel="canonical" href="http://grandeportal.github.io/2016/01/03/i-love-linux/">
+    <link rel="canonical" href="http://grandeportal.github.io/2016/01/05/editando-o-grub/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -83,14 +83,14 @@
 
 
     <!-- Post Header -->
-<header class="intro-header" style="background-image: url('/img/posts/post-bg-03.png')">
+<header class="intro-header" style="background-image: url('/img/posts/post-bg-edit-grub.png')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>I Love Linux</h1>
+                    <h1>Editando o GRUB</h1>
                     
-                    <span class="meta">Postado por Régis da Silva Santos on January 3, 2016</span>
+                    <span class="meta">Postado por Régis da Silva Santos on January 5, 2016</span>
                 </div>
             </div>
         </div>
@@ -103,36 +103,34 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-				<p>Um dia um professor, que é meu amigo até hoje, falou pra mim:</p>
+				<p><strong>Cuidado:</strong> Não é muito bom editar o GRUB, mas de vez em quando a gente precisa.</p>
 
-<p><em>“Seja livre! Use Linux.”</em></p>
-
-<p>Foi difícil eu me desgrudar do Windows porque o <em>MS Excel</em> é bom, isso é fato. Mas foi mais difícil ainda por causa do meu <em>Need For Speed</em>. Então eu fiz um <strong>Dual boot</strong>. Ou seja, não quer perder o Windows, mas quer usar um sistema operacional de verdade (calma, eu vim em paz)…</p>
-
-<p>Eu não vou ensinar a fazer a instalação do Linux com dual boot porque tem um monte de tutorial por ai que ensina (não fiquem com raiva de mim), mas se tiverem alguma dúvida é só falar.</p>
+<p>Neste exemplo vou editar somente o <code class="highlighter-rouge">timeout</code> para 5 seg.</p>
 
 <blockquote>
-  <p>Importante: tenha uma imagem do Ubuntu num pen drive.</p>
+  <p>Faça um <strong>backup</strong> do grub. Senão já era.</p>
 </blockquote>
 
-<h2 id="porque-eu-uso-ubuntu0">Porque eu uso <a href="http://www.ubuntu.com/">Ubuntu</a>?</h2>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cp /etc/default/grub /etc/default/grub_ori
+sudo gedit /etc/default/grub</code></pre></figure>
 
-<p><strong>Ubuntu</strong> é o mais popular das distros baseadas em <em>Debian</em>. E tudo é fácil de instalar nele. Só o fato de você não precisar entrar de site em site em busca de drivers para isso ou aquilo já é uma grande vantagem.</p>
+<p><strong>Antes</strong></p>
 
-<p>Novamente, eu gosto de usar Linux porque para <em>desenvolvimento</em> é muito mais fácil, rápido e simples de instalar programas, pacotes adicionais, isolar ambientes de desenvolvimento, simular máquinas, conexões, etc.</p>
+<figure class="highlight"><pre><code class="language-vim" data-lang="vim">GRUB_TIMEOUT<span class="p">=</span><span class="m">10</span></code></pre></figure>
 
-<p>E é <em>open-source</em>! :) Desenvolvedores adoram esse termo.</p>
+<p><strong>Depois</strong></p>
 
-<p>A partir da <strong>Central de Programas do Ubuntu</strong> você pode instalar qualquer coisa.</p>
+<figure class="highlight"><pre><code class="language-vim" data-lang="vim">GRUB_TIMEOUT<span class="p">=</span><span class="m">5</span></code></pre></figure>
 
-<p><img src="/img/posts/central.png" alt="central.png" /></p>
+<p>Salva e fecha. E no terminal digite</p>
 
-<p>Ou a partir do <strong>terminal</strong> com o comando</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo update-grub</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">apt-get install nome_do_programa</code></pre></figure>
+<p>Pronto!</p>
 
-<p><img src="/img/posts/animatrix.gif" alt="animatrix.gif" /></p>
+<p><img src="/img/posts/grub-update.png" alt="grub-update.png" /></p>
 
+<p><strong>Fonte:</strong> <a href="http://www.howtogeek.com/196655/how-to-configure-the-grub2-boot-loaders-settings/">how-to-configure-the-grub2-boot-loaders-settings</a></p>
 
 
                 <hr>
@@ -140,13 +138,9 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2016/01/02/comunidades-eventos/" data-toggle="tooltip" data-placement="top" title="Comunidades e Eventos"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
+                        <a href="/2016/01/04/recuperando-o-grub/" data-toggle="tooltip" data-placement="top" title="Recuperando o GRUB"><span class="glyphicon glyphicon-chevron-left"></span> Anterior</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/2016/01/04/8-alterando-o-prompt-do-terminal/" data-toggle="tooltip" data-placement="top" title="Alterando o Prompt do Terminal">Próximo <span class="glyphicon glyphicon-chevron-right"></span></a>
-                    </li>
                     
                 </ul>
 
