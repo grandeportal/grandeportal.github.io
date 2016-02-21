@@ -1,11 +1,27 @@
 [
   
     {
+      "title"    : "Download com Wget",
+      "category" : "download, wget",
+      "tags"     : "",
+      "url"      : "/download,%20wget/2016/wget/",
+      "date"     : "2016-02-21 00:00:00 -0300"
+    } ,
+  
+    {
+      "title"    : "Time",
+      "category" : "time",
+      "tags"     : "",
+      "url"      : "/time/2016/time/",
+      "date"     : "2016-02-20 00:00:00 -0200"
+    } ,
+  
+    {
       "title"    : "Renomeando Comandos",
       "category" : "terminal, alias",
       "tags"     : "",
       "url"      : "/terminal,%20alias/2016/renomeando-comandos/",
-      "date"     : "2016-02-21 00:00:00 -0300"
+      "date"     : "2016-02-19 00:00:00 -0200"
     } ,
   
     {

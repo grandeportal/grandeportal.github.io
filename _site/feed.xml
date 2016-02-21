@@ -5,9 +5,85 @@
     <description>Blog sobre programação</description>
     <link>http://grandeportal.github.io//</link>
     <atom:link href="http://grandeportal.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 21 Feb 2016 04:03:51 -0300</pubDate>
-    <lastBuildDate>Sun, 21 Feb 2016 04:03:51 -0300</lastBuildDate>
+    <pubDate>Sun, 21 Feb 2016 17:44:13 -0300</pubDate>
+    <lastBuildDate>Sun, 21 Feb 2016 17:44:13 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Download com Wget</title>
+        <description>&lt;p&gt;O &lt;a href=&quot;http://manpages.ubuntu.com/manpages/lucid/man1/wget.1.html&quot;&gt;wget&lt;/a&gt; é um utilitário usado para fazer download de arquivos. Se você digitar&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget -h&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;você verá todas as opções disponíveis. Vou destacar apenas alguns.&lt;/p&gt;
+
+&lt;h2 id=&quot;download-simples&quot;&gt;Download simples&lt;/h2&gt;
+
+&lt;p&gt;Vamos baixar o nosso blog.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget http://grandeportal.github.io/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Experimente baixar o &lt;a href=&quot;https://www.gimp.org/&quot;&gt;Gimp&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget https://download.gimp.org/mirror/pub/gimp/v2.8/gimp-2.8.16.tar.bz2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;definindo-o-nome-do-arquivo-ao-salvar-o-download&quot;&gt;Definindo o nome do arquivo ao salvar o download&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget --output-document&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;setup.sh https://goo.gl/pm621U&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ou &lt;code&gt;-O&lt;/code&gt; (maiúsculo).&lt;/p&gt;
+
+&lt;h2 id=&quot;baixando-de-uma-lista&quot;&gt;Baixando de uma lista&lt;/h2&gt;
+
+&lt;p&gt;Podemos criar uma lista de downloads: &lt;code&gt;list.txt&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;# list.txt
+http://grandeportal.github.io/
+http://manpages.ubuntu.com/manpages/lucid/man1/wget.1.html&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;E baixar tudo de uma vez.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget --input-file&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;list.txt &lt;span class=&quot;c&quot;&gt;# ou&lt;/span&gt;
+wget -i list.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Referências:&lt;/p&gt;
+
+&lt;p&gt;http://manpages.ubuntu.com/manpages/lucid/man1/wget.1.html&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 21 Feb 2016 00:00:00 -0300</pubDate>
+        <link>http://grandeportal.github.io//download,%20wget/2016/wget/</link>
+        <guid isPermaLink="true">http://grandeportal.github.io//download,%20wget/2016/wget/</guid>
+        
+        
+        <category>download, wget</category>
+        
+      </item>
+    
+      <item>
+        <title>Time</title>
+        <description>&lt;p&gt;Como o nome já diz, o comando time serve para medir o tempo de execução de algum processamento.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;comando&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Experimente&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;sudo apt-get update&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;O meu demorou&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;real    0m25.322s
+user    0m12.504s
+sys     0m0.472s&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sat, 20 Feb 2016 00:00:00 -0200</pubDate>
+        <link>http://grandeportal.github.io//time/2016/time/</link>
+        <guid isPermaLink="true">http://grandeportal.github.io//time/2016/time/</guid>
+        
+        
+        <category>time</category>
+        
+      </item>
     
       <item>
         <title>Renomeando Comandos</title>
@@ -55,7 +131,7 @@
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;manage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;python $VIRTUAL_ENV/../manage.py&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
-        <pubDate>Sun, 21 Feb 2016 00:00:00 -0300</pubDate>
+        <pubDate>Fri, 19 Feb 2016 00:00:00 -0200</pubDate>
         <link>http://grandeportal.github.io//terminal,%20alias/2016/renomeando-comandos/</link>
         <guid isPermaLink="true">http://grandeportal.github.io//terminal,%20alias/2016/renomeando-comandos/</guid>
         
@@ -427,52 +503,6 @@ update-grub
         
         
         <category>comunidade, evento</category>
-        
-      </item>
-    
-      <item>
-        <title>Apresentação</title>
-        <description>&lt;h2 id=&quot;eu-em-frente-ao-espelho&quot;&gt;Eu em frente ao espelho&lt;/h2&gt;
-
-&lt;p&gt;Olá, meu nome é &lt;a href=&quot;https://about.me/rg3915&quot;&gt;Régis&lt;/a&gt;. Sou formado em Licenciatura em Matemática pela UFMT e em Análise e Desenvolvimento de Sistemas pelo Senac-SP.&lt;/p&gt;
-
-&lt;p&gt;Gosto muito de programação computacional. Já gostei de computação gráfica também.&lt;/p&gt;
-
-&lt;p&gt;Gosto de andar de bike! Deu até saudades do tempo em que eu pedalava de verdade, longas distâncias, e um pouco de adrenalina com velocidades altas.&lt;/p&gt;
-
-&lt;p&gt;Gosto de filmes de ação, aventura, super-heróis e esses mais famosos que todo mundo assiste e dá recordes de bilheteria.&lt;/p&gt;
-
-&lt;p&gt;Bom, eu me considero como &lt;em&gt;web developer&lt;/em&gt;, então vamos falar sobre isso.&lt;/p&gt;
-
-&lt;h2 id=&quot;o-objetivo-do-blog&quot;&gt;O objetivo do blog&lt;/h2&gt;
-
-&lt;p&gt;O nome do blog é &lt;strong&gt;Grande Portal&lt;/strong&gt; porque eu sempre me lembro de &lt;a href=&quot;http://www.fullmetalalchemist.com.au/&quot;&gt;Fullmetal Alchemist&lt;/a&gt;, uma série de mangá da hora!&lt;/p&gt;
-
-&lt;p&gt;Mas aqui eu irei falar exclusivamente de &lt;strong&gt;programação&lt;/strong&gt;! Dicas e tutoriais para desenvolvimento de atividades computacionais envolvendo programação.&lt;/p&gt;
-
-&lt;p&gt;Talvez eu fale de &lt;a href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt;, porque é a linguagem que eu mais gosto.&lt;/p&gt;
-
-&lt;p&gt;Talvez eu fale de &lt;a href=&quot;http://djangoproject.com/&quot;&gt;Django&lt;/a&gt;, porque é o framework que eu mais gosto.&lt;/p&gt;
-
-&lt;p&gt;Mas vou começar falando sobre como &lt;strong&gt;dominar o terminal&lt;/strong&gt; e criar uns &lt;strong&gt;scripts&lt;/strong&gt; da hora.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Leia mais:&lt;/strong&gt; Veja também alguns posts que eu escrevi em &lt;a href=&quot;http://pythonclub.com.br/author/regis-da-silva.html&quot;&gt;PythonClub.com.br&lt;/a&gt; e algumas dicas no meu &lt;a href=&quot;https://gist.github.com/rg3915/&quot;&gt;Gist&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;sal&quot;&gt;SAL&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Serviço de Atendimento ao Leitor&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Aceito sugestões, críticas, elogios, dúvidas, presentes, etc.&lt;/p&gt;
-
-&lt;p&gt;Espero que gostem!&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 01 Jan 2016 00:00:00 -0200</pubDate>
-        <link>http://grandeportal.github.io//welcome/2016/apresentacao/</link>
-        <guid isPermaLink="true">http://grandeportal.github.io//welcome/2016/apresentacao/</guid>
-        
-        
-        <category>welcome</category>
         
       </item>
     

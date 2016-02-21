@@ -12,7 +12,7 @@
 
 
 
-<title>Grande Portal | Blog sobre programação</title>
+<title> Download com Wget | Grande Portal</title>
 
 
 
@@ -35,12 +35,10 @@
 
 
 
-  <link rel="next" href="http://grandeportal.github.io//page/2">
 
 
 
-
-<link rel="canonical" href="http://grandeportal.github.io//">
+<link rel="canonical" href="http://grandeportal.github.io//download,%20wget/2016/wget/">
 <link rel="alternate" type="application/rss+xml" title="Grande Portal" href="http://grandeportal.github.io//feed.xml" />
 
 
@@ -62,7 +60,7 @@ _gaq.push(['_trackPageview']);
     <meta name="robots" content="noindex"> <!--=====  Please remove it ! ! !  ======-->
     <meta name="googlebot" content="noindex"> <!--=====  Please remove it ! ! !  ======-->
   </head>
-  <body class="home">
+  <body class="single">
 
     <main class="main-container">
 
@@ -91,12 +89,8 @@ _gaq.push(['_trackPageview']);
     </a>
 
     
-      <h1>Bem vindo ao Grande Portal</h1>
-      <div class="search">
-  <i class="icon icon-search"></i>
-  <input type="text" id="search-input" class="input" placeholder="Busca por palavra chave...">
-  <ul id="results-container" class="dropdown"></ul>
-</div>
+      <h1 class="post-title">Download com Wget</h1>
+      <p class="post-meta">Feb 21, 2016</p>
     
 
   </div>
@@ -105,104 +99,99 @@ _gaq.push(['_trackPageview']);
 
 
         <section class="main-content">
-          <section class="posts txt-center container">
+          <article class="post">
+
+  <div class="post-content container">
+    <p>O <a href="http://manpages.ubuntu.com/manpages/lucid/man1/wget.1.html">wget</a> é um utilitário usado para fazer download de arquivos. Se você digitar</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget -h</code></pre></div>
+
+<p>você verá todas as opções disponíveis. Vou destacar apenas alguns.</p>
+
+<h2 id="download-simples">Download simples</h2>
+
+<p>Vamos baixar o nosso blog.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget http://grandeportal.github.io/</code></pre></div>
+
+<p>Experimente baixar o <a href="https://www.gimp.org/">Gimp</a></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget https://download.gimp.org/mirror/pub/gimp/v2.8/gimp-2.8.16.tar.bz2</code></pre></div>
+
+<h2 id="definindo-o-nome-do-arquivo-ao-salvar-o-download">Definindo o nome do arquivo ao salvar o download</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget --output-document<span class="o">=</span>setup.sh https://goo.gl/pm621U</code></pre></div>
+
+<p>Ou <code>-O</code> (maiúsculo).</p>
+
+<h2 id="baixando-de-uma-lista">Baixando de uma lista</h2>
+
+<p>Podemos criar uma lista de downloads: <code>list.txt</code>.</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text"># list.txt
+http://grandeportal.github.io/
+http://manpages.ubuntu.com/manpages/lucid/man1/wget.1.html</code></pre></div>
+
+<p>E baixar tudo de uma vez.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">wget --input-file<span class="o">=</span>list.txt <span class="c"># ou</span>
+wget -i list.txt</code></pre></div>
+
+<p>Referências:</p>
+
+<p>http://manpages.ubuntu.com/manpages/lucid/man1/wget.1.html</p>
+
+
+
+    <aside class="share">
+
+      <span>Share this: </span>
+
+      <a href="http://twitter.com/share?text=Download com Wget&amp;url=http://grandeportal.github.io//download,%20wget/2016/wget/&amp;hashtags=web,dev,blog,soudev&amp;via=nandomoreirame"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <i class="icon icon-twitter-rounded"></i>
+      </a>
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://grandeportal.github.io//download,%20wget/2016/wget/"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <i class="icon icon-facebook-rounded"></i>
+      </a>
+
+    </aside>
+  </div>
 
   
-    
-<article class="post">
+  <hr>
 
-  
-    <h1>
-      <a class="post-link" href="/download,%20wget/2016/wget/" title="Permalink to: Download com Wget">Download com Wget</a>
-    </h1>
-    <span class="post-meta">
-      <time class="post-date" datetime="2016-02-21">Feb 21, 2016 | download, wget</time>
-    </span>
-    <p><a href="/download,%20wget/2016/wget/" title="Permalink to: Download com Wget" class="read-more">O wget é um utilitário usado para fazer download de arquivos. Se você digitar wget -h você verá todas as opções disponíveis. Vou destacar apenas alguns. Download simples Vamos baixar...</a></p>
-  
+  <aside id="comments" class="disqus">
+
+    <div class="container">
+      <h3><i class="icon icon-comments-o"></i> Comments</h3>
+      <div id="disqus_thread"></div>
+
+      <script type="text/javascript">
+        var disqus_shortname = 'rg3915';
+        var disqus_identifier = '/download,%20wget/2016/wget';
+        var disqus_title = 'Download com Wget';
+        var disqus_url = 'http://grandeportal.github.io/';
+        /*var disqus_developer = 1;*/
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+
+      <noscript>
+        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+      </noscript>
+    </div>
+
+  </aside>
 
 
 </article>
-  
-    
-<article class="post">
-
-  
-    <h1>
-      <a class="post-link" href="/time/2016/time/" title="Permalink to: Time">Time</a>
-    </h1>
-    <span class="post-meta">
-      <time class="post-date" datetime="2016-02-20">Feb 20, 2016 | time</time>
-    </span>
-    <p><a href="/time/2016/time/" title="Permalink to: Time" class="read-more">Como o nome já diz, o comando time serve para medir o tempo de execução de algum processamento. time comando Experimente time sudo apt-get update O meu demorou real 0m25.322s...</a></p>
-  
-
-
-</article>
-  
-    
-<article class="post">
-
-  
-    <h1>
-      <a class="post-link" href="/terminal,%20alias/2016/renomeando-comandos/" title="Permalink to: Renomeando Comandos">Renomeando Comandos</a>
-    </h1>
-    <span class="post-meta">
-      <time class="post-date" datetime="2016-02-19">Feb 19, 2016 | terminal, alias</time>
-    </span>
-    <p><a href="/terminal,%20alias/2016/renomeando-comandos/" title="Permalink to: Renomeando Comandos" class="read-more">Para renomear um comando precisamos editar o arquivo ~/.bashrc. Isso para usuários do Linux. Renomear um comando significa alterar a função original de determinado comando. Deletando com confirmação Este exemplo...</a></p>
-  
-
-
-</article>
-  
-    
-<article class="post">
-
-  
-    <h1>
-      <a class="post-link" href="/terminal/2016/alterando-o-prompt-do-terminal/" title="Permalink to: Alterando o Prompt do Terminal">Alterando o Prompt do Terminal</a>
-    </h1>
-    <span class="post-meta">
-      <time class="post-date" datetime="2016-01-08">Jan 8, 2016 | terminal</time>
-    </span>
-    <p><a href="/terminal/2016/alterando-o-prompt-do-terminal/" title="Permalink to: Alterando o Prompt do Terminal" class="read-more">Vejamos aqui como alterar o prompt do terminal. O mínimo PS1=&quot;$ &quot; Username: O nome do usuário PS1=&quot;\u$ &quot; Hostname: O nome da máquina PS1=&quot;\h$ &quot; Full Path: O caminho...</a></p>
-  
-
-
-</article>
-  
-    
-<article class="post">
-
-  
-    <h1>
-      <a class="post-link" href="/terminal,%20cor/2016/terminal-com-texto-colorido/" title="Permalink to: Terminal com Texto Colorido">Terminal com Texto Colorido</a>
-    </h1>
-    <span class="post-meta">
-      <time class="post-date" datetime="2016-01-07">Jan 7, 2016 | terminal, cor</time>
-    </span>
-    <p><a href="/terminal,%20cor/2016/terminal-com-texto-colorido/" title="Permalink to: Terminal com Texto Colorido" class="read-more">Para deixar o terminal com texto colorido digite sudo gedit ~/.bashrc Procure pela linha (46) que contém o texto #force_color_prompt=yes Basta tirar o símbolo #. Salvar e fechar. Nota: é...</a></p>
-  
-
-
-</article>
-  
-
-  <nav class="pagination" role="pagination">
-  <ul>
-    
-
-    <li><span class="page-number">Página 1 de 3</span></li>
-
-    
-      <li><a class="prev" href="/page/2/" title="Articles old">Próximo &raquo;</a></li>
-    
-  </ul>
-</nav>
-
-</section>
-
 
         </section>
 
