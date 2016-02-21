@@ -1,23 +1,39 @@
-# Site settings
+permalink   : /:categories/:year/:title/
+markdown    : kramdown
+highlighter : pygments
+
+paginate: 5
+comments: true
+paginate_path: "/page/:num"
+
+source: source
+destination: _site
+sass:
+  sass_dir: _scss
+  style: compressed
+
+# cover: /assets/images/default-cover.png
+cover: /assets/images/matrix-code.jpg
+
+# site title, description, meta_description, meta_keywords
+# Details for the RSS feed generator
+name: Grande Portal
 title: Grande Portal
-header-img: img/matrix-code.jpg
-layout: post
-author: Régis da Silva Santos
-email: regis.santos.100@gmail.com
-description: "Blog sobre programação!"
-url: "http://grandeportal.github.io"
-twitter_username: rg3915
-github_username:  rg3915
+description: "Blog sobre programação"
+keywords: "bash, shell, terminal, python, django, linux"
+url: http://grandeportal.github.io/
+baseurl: ""
+# domain_name: nandomoreira.me
+# google_analytics: UA-52446115-1
+repo: https://github.com/grandeportal/grandeportal.github.io
+disqus_shortname: "rg3915"
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-permalink: pretty
-paginate: 7
-mathjax: true
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","Gemfile","Gemfile.lock"]
+author:
+  name      : Régis da Silva Santos
+  image     : /assets/images/author.jpg
+  email     : regis.santos.100@gmail.com
+  url       : http://grandeportal.github.io/
+  twitter   : http://twitter.com/rg3915
+  github    : http://github.com/rg3915
 
-# Gems
-gems:
-  - jekyll-paginate
-  - kramdown
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]

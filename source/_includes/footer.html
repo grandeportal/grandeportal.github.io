@@ -1,0 +1,42 @@
+<footer class="site-footer txt-center">
+  <hr>
+    <div class="container">
+        <div class="row">
+                <ul class="text-center">
+                    <li>
+                        <a href="{{ "/" | prepend: site.baseurl }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-home fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ site.author.twitter }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ site.author.github }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <small><a href="https://github.com/grandeportal/grandeportal.github.io">{{ site.title }}</a> &copy; {{ site.time | date: '%Y' }}. Made with <a href="http://jekyllrb.com" target="_blank">Jekyll</a> by <a href="http://nandomoreira.me" target="_blank">nandomoreira.me</a></small>
+        </div>
+    </div>
+</footer>
