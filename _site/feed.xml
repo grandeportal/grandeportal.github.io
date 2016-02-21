@@ -5,9 +5,64 @@
     <description>Blog sobre programação</description>
     <link>http://grandeportal.github.io//</link>
     <atom:link href="http://grandeportal.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 21 Feb 2016 03:35:24 -0300</pubDate>
-    <lastBuildDate>Sun, 21 Feb 2016 03:35:24 -0300</lastBuildDate>
+    <pubDate>Sun, 21 Feb 2016 04:03:51 -0300</pubDate>
+    <lastBuildDate>Sun, 21 Feb 2016 04:03:51 -0300</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Renomeando Comandos</title>
+        <description>&lt;p&gt;Para renomear um comando precisamos editar o arquivo &lt;code&gt;~/.bashrc&lt;/code&gt;. Isso para usuários do Linux.&lt;/p&gt;
+
+&lt;p&gt;Renomear um comando significa alterar a função original de determinado comando.&lt;/p&gt;
+
+&lt;h2 id=&quot;deletando-com-confirmao&quot;&gt;Deletando com confirmação&lt;/h2&gt;
+
+&lt;p&gt;Este exemplo é muito importante, pois pode evitar dor de cabeça futuramente.&lt;/p&gt;
+
+&lt;p&gt;Pra quem usa Linux sabe que o comando &lt;code&gt;rm&lt;/code&gt; deleta algum arquivo. E sabe também que ele não vai para a lixeira. Além disso, ele deleta e nem pede confirmação.&lt;/p&gt;
+
+&lt;p&gt;A partir de agora, digitando&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;rm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;rm -i&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;dentro do arquivo &lt;code&gt;~/.bashrc&lt;/code&gt; o seu comando &lt;code&gt;rm&lt;/code&gt; pedirá confirmação antes de deletar.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Para surtir efeito você deve reiniciar o terminal ou digitar&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bashrc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;listando-os-arquivos&quot;&gt;Listando os arquivos&lt;/h2&gt;
+
+&lt;p&gt;Para listar os arquivos com todos os detalhes, inclusive os arquivos ocultos, eu uso o comando &lt;code&gt;ll&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;ls -alF&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;diminuindo-o-caminho-do-prompt&quot;&gt;Diminuindo o caminho do prompt&lt;/h2&gt;
+
+&lt;p&gt;Se lembra do comando para diminuir o caminho do prompt?&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;PS1=&amp;quot;\e[1;34m/\W\e[00m$ &amp;quot;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Digitando &lt;code&gt;p&lt;/code&gt; ele já faz isso pra nós.&lt;/p&gt;
+
+&lt;h2 id=&quot;diminuindo-o-caminho-com-virtualenv-ativado&quot;&gt;Diminuindo o caminho com virtualenv ativado&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;pa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;PS1=&amp;quot;(`basename \&amp;quot;$VIRTUAL_ENV\&amp;quot;`)\e[1;34m:/\W\e[00m$ &amp;quot;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;renomeando-o-comando-manage-com-virtualenv-ativado&quot;&gt;Renomeando o comando manage com virtualenv ativado&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;manage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;python $VIRTUAL_ENV/../manage.py&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sun, 21 Feb 2016 00:00:00 -0300</pubDate>
+        <link>http://grandeportal.github.io//terminal,%20alias/2016/renomeando-comandos/</link>
+        <guid isPermaLink="true">http://grandeportal.github.io//terminal,%20alias/2016/renomeando-comandos/</guid>
+        
+        
+        <category>terminal, alias</category>
+        
+      </item>
     
       <item>
         <title>Alterando o Prompt do Terminal</title>

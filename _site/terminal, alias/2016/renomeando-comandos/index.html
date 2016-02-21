@@ -12,13 +12,13 @@
 
 
 
-<title>Grande Portal | Blog sobre programação - Página 2</title>
+<title> Renomeando Comandos | Grande Portal</title>
 
 
 
 
 
-<meta name="description" content="Blog sobre programação - Página 2 ">
+<meta name="description" content="Blog sobre programação">
 
 
 <meta name="keywords" content="bash, shell, terminal, python, django, linux">
@@ -32,15 +32,13 @@
 
 
 
-  <link rel="prev" href="http://grandeportal.github.io//index.html">
 
 
 
 
 
 
-
-<link rel="canonical" href="http://grandeportal.github.io//page/2/">
+<link rel="canonical" href="http://grandeportal.github.io//terminal,%20alias/2016/renomeando-comandos/">
 <link rel="alternate" type="application/rss+xml" title="Grande Portal" href="http://grandeportal.github.io//feed.xml" />
 
 
@@ -62,7 +60,7 @@ _gaq.push(['_trackPageview']);
     <meta name="robots" content="noindex"> <!--=====  Please remove it ! ! !  ======-->
     <meta name="googlebot" content="noindex"> <!--=====  Please remove it ! ! !  ======-->
   </head>
-  <body class="home">
+  <body class="single">
 
     <main class="main-container">
 
@@ -91,12 +89,8 @@ _gaq.push(['_trackPageview']);
     </a>
 
     
-      <h1>Bem vindo ao Grande Portal</h1>
-      <div class="search">
-  <i class="icon icon-search"></i>
-  <input type="text" id="search-input" class="input" placeholder="Busca por palavra chave...">
-  <ul id="results-container" class="dropdown"></ul>
-</div>
+      <h1 class="post-title">Renomeando Comandos</h1>
+      <p class="post-meta">Feb 21, 2016</p>
     
 
   </div>
@@ -105,90 +99,103 @@ _gaq.push(['_trackPageview']);
 
 
         <section class="main-content">
-          <section class="posts txt-center container">
+          <article class="post">
+
+  <div class="post-content container">
+    <p>Para renomear um comando precisamos editar o arquivo <code>~/.bashrc</code>. Isso para usuários do Linux.</p>
+
+<p>Renomear um comando significa alterar a função original de determinado comando.</p>
+
+<h2 id="deletando-com-confirmao">Deletando com confirmação</h2>
+
+<p>Este exemplo é muito importante, pois pode evitar dor de cabeça futuramente.</p>
+
+<p>Pra quem usa Linux sabe que o comando <code>rm</code> deleta algum arquivo. E sabe também que ele não vai para a lixeira. Além disso, ele deleta e nem pede confirmação.</p>
+
+<p>A partir de agora, digitando</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">rm</span><span class="o">=</span><span class="s1">&#39;rm -i&#39;</span></code></pre></div>
+
+<p>dentro do arquivo <code>~/.bashrc</code> o seu comando <code>rm</code> pedirá confirmação antes de deletar.</p>
+
+<blockquote>
+  <p>Para surtir efeito você deve reiniciar o terminal ou digitar</p>
+</blockquote>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">source</span> ~/.bashrc</code></pre></div>
+
+<h2 id="listando-os-arquivos">Listando os arquivos</h2>
+
+<p>Para listar os arquivos com todos os detalhes, inclusive os arquivos ocultos, eu uso o comando <code>ll</code>.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -alF&#39;</span></code></pre></div>
+
+<h2 id="diminuindo-o-caminho-do-prompt">Diminuindo o caminho do prompt</h2>
+
+<p>Se lembra do comando para diminuir o caminho do prompt?</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">p</span><span class="o">=</span><span class="s1">&#39;PS1=&quot;\e[1;34m/\W\e[00m$ &quot;&#39;</span></code></pre></div>
+
+<p>Digitando <code>p</code> ele já faz isso pra nós.</p>
+
+<h2 id="diminuindo-o-caminho-com-virtualenv-ativado">Diminuindo o caminho com virtualenv ativado</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">pa</span><span class="o">=</span><span class="s1">&#39;PS1=&quot;(`basename \&quot;$VIRTUAL_ENV\&quot;`)\e[1;34m:/\W\e[00m$ &quot;&#39;</span></code></pre></div>
+
+<h2 id="renomeando-o-comando-manage-com-virtualenv-ativado">Renomeando o comando manage com virtualenv ativado</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">manage</span><span class="o">=</span><span class="s1">&#39;python $VIRTUAL_ENV/../manage.py&#39;</span></code></pre></div>
+
+
+    <aside class="share">
+
+      <span>Share this: </span>
+
+      <a href="http://twitter.com/share?text=Renomeando Comandos&amp;url=http://grandeportal.github.io//terminal,%20alias/2016/renomeando-comandos/&amp;hashtags=web,dev,blog,soudev&amp;via=nandomoreirame"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <i class="icon icon-twitter-rounded"></i>
+      </a>
+
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://grandeportal.github.io//terminal,%20alias/2016/renomeando-comandos/"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <i class="icon icon-facebook-rounded"></i>
+      </a>
+
+    </aside>
+  </div>
 
   
-    
-<article class="post">
+  <hr>
 
-  
-    <h1>
-      <a class="post-link" href="/grub/2016/recuperando-o-grub/" title="Permalink to: Recuperando o GRUB">Recuperando o GRUB</a>
-    </h1>
-    <span class="post-meta">
-      <time class="post-date" datetime="2016-01-04">Jan 4, 2016 | grub</time>
-    </span>
-    <p><a href="/grub/2016/recuperando-o-grub/" title="Permalink to: Recuperando o GRUB" class="read-more">Quando você faz a instalação do Ubuntu usando dual boot… Instale primeiro o Windows Depois instale o Ubuntu … você terá uma tela parecida com essa. O famoso GRUB, onde...</a></p>
-  
+  <aside id="comments" class="disqus">
+
+    <div class="container">
+      <h3><i class="icon icon-comments-o"></i> Comments</h3>
+      <div id="disqus_thread"></div>
+
+      <script type="text/javascript">
+        var disqus_shortname = 'rg3915';
+        var disqus_identifier = '/terminal,%20alias/2016/renomeando-comandos';
+        var disqus_title = 'Renomeando Comandos';
+        var disqus_url = 'http://grandeportal.github.io/';
+        /*var disqus_developer = 1;*/
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+
+      <noscript>
+        Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+      </noscript>
+    </div>
+
+  </aside>
 
 
 </article>
-  
-    
-<article class="post">
-
-  
-    <h1>
-      <a class="post-link" href="/linux,%20ubuntu/2016/i-love-linux/" title="Permalink to: I Love Linux">I Love Linux</a>
-    </h1>
-    <span class="post-meta">
-      <time class="post-date" datetime="2016-01-03">Jan 3, 2016 | linux, ubuntu</time>
-    </span>
-    <p><a href="/linux,%20ubuntu/2016/i-love-linux/" title="Permalink to: I Love Linux" class="read-more">Um dia um professor, que é meu amigo até hoje, falou pra mim: “Seja livre! Use Linux.” Foi difícil eu me desgrudar do Windows porque o MS Excel é bom,...</a></p>
-  
-
-
-</article>
-  
-    
-<article class="post">
-
-  
-    <h1>
-      <a class="post-link" href="/comunidade,%20evento/2016/comunidades-eventos/" title="Permalink to: Comunidades e Eventos">Comunidades e Eventos</a>
-    </h1>
-    <span class="post-meta">
-      <time class="post-date" datetime="2016-01-02">Jan 2, 2016 | comunidade, evento</time>
-    </span>
-    <p><a href="/comunidade,%20evento/2016/comunidades-eventos/" title="Permalink to: Comunidades e Eventos" class="read-more">Desde 2015 eu venho participando de algumas comunidades e eventos bem interessantes. Bom, acho que todo desenvolvedor conhece o stackoverflow.com e o pt.stackoverflow.com. Creio que alguns também conheçam as listas...</a></p>
-  
-
-
-</article>
-  
-    
-<article class="post">
-
-  
-    <h1>
-      <a class="post-link" href="/welcome/2016/apresentacao/" title="Permalink to: Apresentação">Apresentação</a>
-    </h1>
-    <span class="post-meta">
-      <time class="post-date" datetime="2016-01-01">Jan 1, 2016 | welcome</time>
-    </span>
-    <p><a href="/welcome/2016/apresentacao/" title="Permalink to: Apresentação" class="read-more">Eu em frente ao espelho Olá, meu nome é Régis. Sou formado em Licenciatura em Matemática pela UFMT e em Análise e Desenvolvimento de Sistemas pelo Senac-SP. Gosto muito de...</a></p>
-  
-
-
-</article>
-  
-
-  <nav class="pagination" role="pagination">
-  <ul>
-    
-      
-        <li><a class="next" href="/" title="Articles new">&laquo; Anterior</a></li>
-      
-    
-
-    <li><span class="page-number">Página 2 de 2</span></li>
-
-    
-  </ul>
-</nav>
-
-</section>
-
 
         </section>
 

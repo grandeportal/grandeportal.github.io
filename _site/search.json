@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Renomeando Comandos",
+      "category" : "terminal, alias",
+      "tags"     : "",
+      "url"      : "/terminal,%20alias/2016/renomeando-comandos/",
+      "date"     : "2016-02-21 00:00:00 -0300"
+    } ,
+  
+    {
       "title"    : "Alterando o Prompt do Terminal",
       "category" : "terminal",
       "tags"     : "",
