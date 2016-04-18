@@ -41,7 +41,7 @@ Sair sem salvar
 
 ## Modo de inserção
 
-A ideia do Vim é a seguinte:
+O Vim funciona da seguinte forma:
 
 **Modo normal** é o modo inicial do Vim onde você digita os comandos.
 
@@ -55,20 +55,30 @@ Para sair do modo de edição e voltar para o modo normal pressione <ESC>.
 ## Edição
 
 `i` . insere antes do cursor
+
 `a` . insere depois do cursor
+
 `I` . insere no início da linha
+
 `A` . insere no fim da linha
+
 `o` . abre nova linha abaixo da linha atual
+
 `O` . abre nova linha acima da linha atual
 
 
 ## Movimentos básicos
 
 `gg` . começo do arquivo
+
 `G` . final do arquivo
+
 `0` . começo da linha
+
 `^` . vai para primeiro caractere não espaço da linha
+
 `$` . final da linha
+
 `:10` . vai para a décima linha
 
 
@@ -76,28 +86,36 @@ Para sair do modo de edição e voltar para o modo normal pressione <ESC>.
 ## Busca e substituição
 
 `/texto` ............ procura a frente
+
 `n` ................. repete a última busca a frente
+
 `N` ................. repete a última busca atrás
+
 `:set ic` ........... ignora maiúsculas e minúsculas
+
 `:%s/antigo/novo/g` . substitui texto
 
 
 ## Movimento de linha
 
 `ddkP` . movimenta uma linha para cima
+
 `ddp` . movimenta uma linha para baixo
 
 
 ## Copiar e colar
 
 `yy` . copiar
+
 `p` . colar
 
 
 ## Deletar
 
 `dd` . deleta a linha atual
+
 `5dd` . deleta 5 linhas abaixo
+
 `:10d` . deleta a linha número 10
 
 
@@ -106,8 +124,11 @@ Para sair do modo de edição e voltar para o modo normal pressione <ESC>.
 C é Ctrl
 
 `C-Ws` ou `:split[Enter]` . divide janela em duas horizontal
+
 `C-Wv` ou `:vsplit[Enter]` . divide janela em duas vertical
+
 `C-Ww` . alterna entre as janelas
+
 `C-Wq` . fecha a janela atual
 
 
@@ -168,7 +189,7 @@ vim ~/.vimrc
 Dentro dele você pode configurar o Vim da forma que quiser. Por exemplo, baseado em [VIM and Python - a Match Made in Heaven](https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/) e [Full Stack Python](https://www.fullstackpython.com/vim.html) e [6 dicas simples para o Vim ser uma IDE perfeita pra Python](http://www.pythonize.org/blog/dicas-simples-vim-ide-python/) eu vou configurar o Vim para Python usando recomendações do [PEP8](https://www.python.org/dev/peps/pep-0008/).
 
 
-`
+```
 " numera as linhas
 set nu
 " mostrar o highlight
@@ -189,7 +210,7 @@ set cursorline
 set fileformat=unix
 " destacando uma coluna
 set cc=80
-`
+```
 
 
 ## Plugins
@@ -205,12 +226,17 @@ O comando `o` abre o arquivo.
 
 
 
-Referências
+**Referências**
 
 [Vim Cheat Sheet pt-br](http://vim.rtorr.com/lang/pt_br/)
+
 [VIM - Cartão de Referência](http://aurelio.net/vim/vimcard.txt)
+
 [Vim Cheat Sheet](http://www.fprintf.net/vimCheatSheet.html)
+
 [Open Vim](http://www.openvim.com/)
+
 [Vim Adventures](http://vim-adventures.com/)
+
 [Insert line numbers](http://vim.wikia.com/wiki/Insert_line_numbers)
 
