@@ -85,15 +85,15 @@ Para sair do modo de edição e voltar para o modo normal pressione <ESC>.
 
 ## Busca e substituição
 
-`/texto` ............ procura a frente
+| `/texto` | procura a frente |
 
-`n` ................. repete a última busca a frente
+| `n` | repete a última busca a frente |
 
-`N` ................. repete a última busca atrás
+| `N` | repete a última busca atrás |
 
-`:set ic` ........... ignora maiúsculas e minúsculas
+| `:set ic` | ignora maiúsculas e minúsculas |
 
-`:%s/antigo/novo/g` . substitui texto
+| `:%s/antigo/novo/g` | substitui texto |
 
 
 ## Movimento de linha
@@ -148,7 +148,7 @@ ou
 
 `:%!nl -ba -nrz -w6`
 
-ou
+ou fora do vim
 
 `sed -n "/pattern/{=;p}" arquivo`
 
