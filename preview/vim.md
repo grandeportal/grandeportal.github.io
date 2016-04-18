@@ -1,14 +1,216 @@
-	http://vim.rtorr.com/lang/pt_br/
-	http://www.fprintf.net/vimCheatSheet.html
+# Vim
 
-	Abrindo
-		Abrindo no final do documento
-	Saindo
-	Definindo opções
-	Modo de inserção
-	Movimento do cursor
-		Ir para o fim da linha
-		Ir para a última linha do documento
-		Ir para linha específica
-		Exclur linha específica
-	Copiar e colar
+O [Vim](http://www.vim.org/) é o editor de texto via terminal mais popular entre desenvolvedores e usuários que adoram o terminal Unix. Apesar de já existirem vários materiais de referência, vou descrever aqui um resumo dos principais comandos.
+
+O [Open Vim](http://www.openvim.com/) é um site bem legal que mostra de forma interativa os comandos do Vim.
+
+Os sites [Vim Cheat Sheet pt-br](http://vim.rtorr.com/lang/pt_br/) e [VIM - Cartão de Referência](http://aurelio.net/vim/vimcard.txt) são uma boa referência para os comandos do Vim.
+
+
+## Abrindo
+
+```bash
+vim arquivo.txt
+```
+
+Para abrir um arquivo existente com o cursor no final do arquivo digite
+
+```bash
+vim arquivo.txt +
+```
+
+
+## Salvando e Saindo
+
+Para salvar do arquivo basta digitar
+
+`:w`
+
+Para sair digite
+
+`:q`
+
+Salvar e sair
+
+`:wq`
+
+Sair sem salvar
+
+`:q!`
+
+
+## Modo de inserção
+
+A ideia do Vim é a seguinte:
+
+**Modo normal** é o modo inicial do Vim onde você digita os comandos.
+
+**Modo de edição** é onde você digita o texto.
+
+Para entrar no modo de edição digite um dos comandos a seguir.
+
+Para sair do modo de edição e voltar para o modo normal pressione <ESC>.
+
+
+## Edição
+
+`i` . insere antes do cursor
+`a` . insere depois do cursor
+`I` . insere no início da linha
+`A` . insere no fim da linha
+`o` . abre nova linha abaixo da linha atual
+`O` . abre nova linha acima da linha atual
+
+
+## Movimentos básicos
+
+`gg` . começo do arquivo
+`G` . final do arquivo
+`0` . começo da linha
+`^` . vai para primeiro caractere não espaço da linha
+`$` . final da linha
+`:10` . vai para a décima linha
+
+
+
+## Busca e substituição
+
+`/texto` ............ procura a frente
+`n` ................. repete a última busca a frente
+`N` ................. repete a última busca atrás
+`:set ic` ........... ignora maiúsculas e minúsculas
+`:%s/antigo/novo/g` . substitui texto
+
+
+## Movimento de linha
+
+`ddkP` . movimenta uma linha para cima
+`ddp` . movimenta uma linha para baixo
+
+
+## Copiar e colar
+
+`yy` . copiar
+`p` . colar
+
+
+## Deletar
+
+`dd` . deleta a linha atual
+`5dd` . deleta 5 linhas abaixo
+`:10d` . deleta a linha número 10
+
+
+## Multi-janela
+
+C é Ctrl
+
+`C-Ws` ou `:split[Enter]` . divide janela em duas horizontal
+`C-Wv` ou `:vsplit[Enter]` . divide janela em duas vertical
+`C-Ww` . alterna entre as janelas
+`C-Wq` . fecha a janela atual
+
+
+## Numerar as linhas
+
+`:%s/^/\=printf('%-4d', line('.'))`
+
+ou
+
+`:%s/^/\=line('.').". "/`
+
+ou
+
+`:%!nl -ba`
+
+ou
+
+`:%!nl -ba -nrz -w6`
+
+ou
+
+`sed -n "/pattern/{=;p}" arquivo`
+
+ou
+
+`sed -n "/*/{=;p}" arquivo.txt | sed "{N;s/\n/ /}" > arquivo2.txt`
+
+ou
+
+`cat -n arquivo.txt > arquivo2.txt`
+
+ou
+
+`awk '{printf("%5d: %s\n", NR,$0)}' arquivo.txt > arquivo2.txt`
+
+
+
+## Configurações
+
+Para mostrar as linhas numeradas no Vim digite
+
+`:set nu`
+
+Para mostrar o *highlight* do seu código digite
+
+`:syntax on`
+
+
+
+## Personalizando o Vim com vimrc
+
+Na sua pasta `~` ou `home/` crie um arquivo chamado `.vimrc`.
+
+```bash
+vim ~/.vimrc
+```
+
+Dentro dele você pode configurar o Vim da forma que quiser. Por exemplo, baseado em [VIM and Python - a Match Made in Heaven](https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/) e [Full Stack Python](https://www.fullstackpython.com/vim.html) e [6 dicas simples para o Vim ser uma IDE perfeita pra Python](http://www.pythonize.org/blog/dicas-simples-vim-ide-python/) eu vou configurar o Vim para Python usando recomendações do [PEP8](https://www.python.org/dev/peps/pep-0008/).
+
+
+`
+" numera as linhas
+set nu
+" mostrar o highlight
+syntax on
+filetype indent plugin on
+" habilita auto-indentação
+set autoindent
+" define a tabulação em 4 espaços
+set ts=4
+set softtabstop=4
+" define tamanho da linha de texto
+set textwidth=79
+" converte tabulação em espaços
+set expandtab
+" mostra uma linha no cursor
+set cursorline
+" formato do arquivo
+set fileformat=unix
+" destacando uma coluna
+set cc=80
+`
+
+
+## Plugins
+
+Não vou explorar muito os plugins mas um que eu gostei bastante foi o [NerdTree](https://github.com/scrooloose/nerdtree).
+
+Depois de instalado você pode digitar `:NERDTree` que aparecerá uma janela lateral com os arquivos da pasta atual.
+
+O comando `o` abre o arquivo.
+
+
+
+
+
+
+Referências
+
+[Vim Cheat Sheet pt-br](http://vim.rtorr.com/lang/pt_br/)
+[VIM - Cartão de Referência](http://aurelio.net/vim/vimcard.txt)
+[Vim Cheat Sheet](http://www.fprintf.net/vimCheatSheet.html)
+[Open Vim](http://www.openvim.com/)
+[Vim Adventures](http://vim-adventures.com/)
+[Insert line numbers](http://vim.wikia.com/wiki/Insert_line_numbers)
+
