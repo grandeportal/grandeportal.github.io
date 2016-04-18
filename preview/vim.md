@@ -49,7 +49,7 @@ O Vim funciona da seguinte forma:
 
 Para entrar no modo de edição digite um dos comandos a seguir.
 
-Para sair do modo de edição e voltar para o modo normal pressione <ESC>.
+Para sair do modo de edição e voltar para o modo normal pressione ESC`.
 
 
 ## Edição
@@ -85,14 +85,12 @@ Para sair do modo de edição e voltar para o modo normal pressione <ESC>.
 
 ## Busca e substituição
 
+| comando  | funcionalidade   |
+|----------|------------------|
 | `/texto` | procura a frente |
-
 | `n` | repete a última busca a frente |
-
 | `N` | repete a última busca atrás |
-
 | `:set ic` | ignora maiúsculas e minúsculas |
-
 | `:%s/antigo/novo/g` | substitui texto |
 
 
