@@ -9,6 +9,9 @@
 * Renomeando Comandos - OK
 * Time - OK
 * Download com Wget - OK
+* Descompactando arquivos pelo terminal - OK
+* Copiando pelo terminal com xclip - OK
+
 * Touch, Cat, Less, Head, Tail
     Redirecionamento da Saída Padrão
         Redirecionamento Perigoso
@@ -32,8 +35,6 @@
 * Shell Script 3 - Programando um pouco
     a festa
 
-* Descompactando arquivos pelo terminal
-* Copiando pelo terminal com xclip
 * Sed e Awk
 * Vim
 * Sublime Text

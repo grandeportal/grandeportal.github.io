@@ -1,4 +1,11 @@
-# Descompactando arquivos pelo terminal
+---
+layout:     post
+title:      "Descompactando arquivos pelo terminal"
+category:   zip, compactar, descompactar
+comments:   true
+---
+
+Veremos a seguir uma descrição de diversos compactadores de arquivos.
 
 ## Extensões dos arquivos
 
@@ -44,15 +51,15 @@ A tabela a seguir resume o que foi descrito:
 
 Compacta usando compactação máxima
 
-```bash
+{% highlight bash %}
 $ gzip -9 arquivo.txt
-```
+{% endhighlight %}
 
 Descompacta o arquivo `arquivo.txt`.
 
-```bash
+{% highlight bash %}
 $ gzip -d arquivo.txt.gz
-```
+{% endhighlight %}
 
 
 
@@ -64,15 +71,15 @@ $ gzip -d arquivo.txt.gz
 
 Compacta usando compactação máxima
 
-```bash
+{% highlight bash %}
 $ bzip2 -9 arquivo.txt
-```
+{% endhighlight %}
 
 Descompacta o arquivo `arquivo.txt`.
 
-```bash
+{% highlight bash %}
 $ bzip2 -d arquivo.txt.bz2
-```
+{% endhighlight %}
 
 
 
@@ -84,15 +91,15 @@ $ bzip2 -d arquivo.txt.bz2
 
 Compacta todos os arquivos `.txt` para o arquivo `textos.zip`.
 
-```bash
+{% highlight bash %}
 $ zip textos.zip *.txt
-```
+{% endhighlight %}
 
 Compacta todos os arquivos da pasta atual usando compactação máxima para o arquivo `textos.zip`.
 
-```bash
+{% highlight bash %}
 $ zip -9 textos.zip *
-```
+{% endhighlight %}
 
 
 
@@ -109,21 +116,21 @@ $ zip -9 textos.zip *
 
 Descompacta o arquivo `textos.zip`.
 
-```bash
+{% highlight bash %}
 $ unzip textos.zip
-```
+{% endhighlight %}
 
 Descompacta apenas o arquivo `carta.txt` do arquivo `textos.zip`.
 
-```bash
+{% highlight bash %}
 $ unzip textos.zip carta.txt
-```
+{% endhighlight %}
 
 Lista o conteúdo antes de descompactar.
 
-```bash
+{% highlight bash %}
 $ unzip -l textos.zip
-```
+{% endhighlight %}
 
 
 **rar** - A extensão é `.rar`.
@@ -147,18 +154,18 @@ $ unzip -l textos.zip
 
 **Exemplos:**
 
-```bash
+{% highlight bash %}
 $ rar a texto.rar texto.txt
 $ rar x texto.rar
-```
+{% endhighlight %}
 
 **tar** - Não é um compactador, apenas um empacotador (junta vários arquivos em um só). A extensão é `.tar`.
 
 **Sintaxe:**
 
-```bash
+{% highlight bash %}
 tar [opções] [arquivo-destino] [arquivo-origem]
-```
+{% endhighlight %}
 
 **Opções:**
 
@@ -176,15 +183,15 @@ A extensão é importante para identificar qual descompactador usar.
 
 Criar `[c]` um arquivo `[file-f]` chamado `arquivo.txt.tar` que apenas guarda o `arquivo.txt`, sem compactá-lo.
 
-```bash
+{% highlight bash %}
 $ tar -cf arquivo.txt.tar arquivo.txt
-```
+{% endhighlight %}
 
 Mais exemplos:
 
-```bash
+{% highlight bash %}
 $ tar -xf arquivo.txt.tar # desempacota o arquivo
 $ tar -xzf arquivo.txt.tar.gz # descompacta e desempacota o arquivo
 $ tar -xjf arquivo.txt.tar.bz2 # descompacta e desempacota o arquivo
 $ tar --list arquivo.txt.tar # lista o conteúdo do arquivo.
-```
+{% endhighlight %}
