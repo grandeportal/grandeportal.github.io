@@ -13,9 +13,9 @@ Depois do caso que aconteceu com [o rapaz que deletou todos os dados da empresa]
 
 O comando que o rapaz executou em específico foi
 
-```bash
+{% highlight bash %}
 rm -rf *
-```
+{% endhighlight %}
 
 Vamos por parte:
 
@@ -27,63 +27,63 @@ Vamos por parte:
 
 Em resumo:
 
-```bash
+{% highlight bash %}
 rm -rf *
-```
+{% endhighlight %}
 
 Deleta tudo das pastas e subpastas sem avisar nada.
 
 
 Julio Neves em seu artigo [Papo de Botequim][1] dá uma dica sobre como contornar esse problema da seguinte forma:
 
-```bash
+{% highlight bash %}
 rm \*
-```
+{% endhighlight %}
 
 Quando usamos barra invertida ele "anula" o parâmetro seguinte, no caso o `*`.
 
 O mesmo efeito pode ser obtido no comando a seguir:
 
-```bash
+{% highlight bash %}
 rm -rf \*
-```
+{% endhighlight %}
 
 Uma outra dica que eu falo no meu post [Renomeando comandos][2], é você editar o seu arquivo `~/.bashrc`, escrevendo o seguinte comando:
 
-```bash
+{% highlight bash %}
 alias rm='rm -i'
-```
+{% endhighlight %}
 
 > Reinicie o terminal para surtir efeito, ou digite
 
-```bash
+{% highlight bash %}
 source ~/.bashrc
-```
+{% endhighlight %}
 
 A partir de agora quando você usar o comando `rm` ele vai pedir confirmação antes de deletar.
 
 Ou você pode desativar o comando enviando uma mensagem. Edite o `~/.bashrc`.
 
-```bash
+{% highlight bash %}
 alias rm='echo "rm is disabled."'
-```
+{% endhighlight %}
 
 
 ## Redirecionamento perigoso
 
 Quando digitamos o comando
 
-```bash
+{% highlight bash %}
 ls /etc/ > arquivo.txt
-```
+{% endhighlight %}
 
 Nós redirecionamos a saída do comando `ls` para o arquivo.txt. Até ai tudo bem.
 
 O **perigo** vem agora:
 
-```bash
+{% highlight bash %}
 cat arquivo.txt > arquivo.txt
-```
+{% endhighlight %}
 
 Nós redirecionamos a saída do arquivo.txt para ele próprio. Pronto, acabamos de perder o conteúdo do nosso arquivo.
 
@@ -91,17 +91,17 @@ Isto é **perigoso** porque se você fizer isso num arquivo importante. Já era!
 
 Outro exemplo:
 
-```bash
+{% highlight bash %}
 echo "texto" > arquivo.txt
-```
+{% endhighlight %}
 
 O conteúdo do arquivo.txt é *texto*.
 
 Se você fizer
 
-```bash
+{% highlight bash %}
 echo "palavra" > arquivo.txt
-```
+{% endhighlight %}
 
 Agora o conteúdo do arquivo.txt é *palavra*.
 
@@ -109,22 +109,22 @@ Agora o conteúdo do arquivo.txt é *palavra*.
 
 Uma solução para estes problemas é você usar `>>`. Assim, ele insere o novo conteúdo numa nova linha de texto, mantendo o conteúdo original.
 
-```bash
+{% highlight bash %}
 echo "palavra" >> arquivo.txt
-```
+{% endhighlight %}
 
 Fazendo
 
-```bash
+{% highlight bash %}
 cat arquivo.txt
-```
+{% endhighlight %}
 
 Teremos
 
-```bash
+{% highlight bash %}
 texto
 palavra
-```
+{% endhighlight %}
 
 
 [0]: http://www.tecmundo.com.br/programacao/103701-cara-cade-firma-rapaz-deleta-empresa-linha-codigo-errada.htm
