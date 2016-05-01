@@ -9,6 +9,8 @@ Depois do caso que aconteceu com [o rapaz que deletou todos os dados da empresa]
 
 > Importante: Sempre leia os comandos antes de executar scripts de terceiros.
 
+<img src="{{ site.baseurl }}/images/command.jpg" alt="command.jpg">
+
 ## Deletando arquivos via terminal
 
 O comando que o rapaz executou em específico foi
