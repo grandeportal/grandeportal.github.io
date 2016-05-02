@@ -12,6 +12,7 @@
 * Descompactando arquivos pelo terminal - OK
 * Copiando pelo terminal com xclip - OK
 * Cuidado com os comandos perigosos do Shell - OK
+* Processos no Linux - OK
 
 * Touch, Cat, Less, Head, Tail
     Redirecionamento da Saída Padrão
