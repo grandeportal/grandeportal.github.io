@@ -37,6 +37,7 @@
 * Shell Script 3 - Programando um pouco
     a festa
 
+* Substituindo texto em vários arquivos
 * Sed e Awk
 * Vim
 * Sublime Text
