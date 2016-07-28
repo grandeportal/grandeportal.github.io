@@ -291,21 +291,27 @@ Depois
 sort < arquivo.txt
 ```
 
+## Pipes
 
+Pipes ( `|` barra vertical) - permite que um programa utilize como entrada a saída de outro programa.
 
-Pipes ( | barra vertical) - permitem que um programa utilize como entrada a saída de outro programa.
-
-
-
+```bash
 $ ls | wc -l
+```
 
+```bash
 $ echo Existem `who | wc -l` usuarios conectados
+```
 
+```bash
 $ ls -a | sort -r
+```
 
 Faz com que o comando `sort` receba como entrada a saída produzida pelo comando `ls`. Neste exemplo o `sort` ordena na ordem reversa.
 
+```bash
 $ cat /etc/passwd | wc -l > lista.txt
+```
 
 Grava no arquivo `lista.txt` o número de linhas do arquivo `passwd`.
 
@@ -323,29 +329,56 @@ Grava no arquivo `lista.txt` o número de linhas do arquivo `passwd`.
 
 Pesquisando em um arquivo específico.
 
-$ grep force_color ~/.bashrc 
+```bash
+$ grep force_color ~/.bashrc
+```
+
+Resultado:
+
+```bash
 force_color_prompt=yes
 if [ -n "$force_color_prompt" ]; then
 unset color_prompt force_color_prompt
+```
 
 Pesquisando em todos os arquivos do tipo `txt`.
 
+```bash
 $ grep regis *.txt
+```
 
 Pesquisando na saída de um comando
 
+```bash
 $ who | grep rg3915
+```
 
+```bash
+$ ps aux | grep python
+```
+
+```bash
+$ curl http://www.meetup.com/pt-BR/Grupy-SP/events/232869373/ | grep Regis
+```
+
+```bash
+$ curl http://www.meetup.com/pt-BR/Grupy-SP/events/232869373/ | grep -c Python
+```
+
+```bash
 $ grep -i
 $ grep --ignore-case
+```
 
-
-
+```bash
 $ grep -r
 $ grep --recursive
+```
 
+```bash
 $ grep -c
 $ grep --count
+```
 
 
 
@@ -353,6 +386,15 @@ $ grep --count
 
 
 Falar do echo
+
+```bash
+echo {2..10}
+echo {a..Z}
+```
+
+```bash
+echo azul{' claro',' escuro'}
+```
 
 \t
 
@@ -376,7 +418,21 @@ Falar do echo
 
 # Shell Script 2 - Estruturas de Controle
 
+seq 10
+
+seq 2 2 10
+
 mkdir pasta; touch pasta/arquivo.txt; cd pasta; ls
+
+if grep mm /etc/passwd; then echo 'ok'; else echo 'não'; fi
+
+if who | grep regis; then echo regis está logado; else echo echo regis não está; fi
+
+# Verifica se o arquivo existe
+if test -e $1; then cat $1; else echo Arquivo não encontrado; fi
+
+# Verifica se uma pasta existe
+if [ ! -d pasta17 ]; then echo 'Pasta não existe'; else echo 'Pasta já existe, veja:'; ls; fi
 
 c = 0; while [[ c -le 10 ]]; do echo "$c"; (( c++ )); sleep 0.5; done
 
