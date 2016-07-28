@@ -222,6 +222,35 @@ O comando `o` abre o arquivo.
 
 
 
+https://github.com/junegunn/vim-plug
+
+https://github.com/terryma/vim-multiple-cursors#installation
+
+http://vim.spf13.com/#install
+
+
+
+## .vimrc
+
+```
+call plug#begin('~/.vim/plugged')
+
+Plug 'https://github.com/terryma/vim-multiple-cursors'
+
+" Add plugins to &runtimepath
+call plug#end()
+
+" Default mapping
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+```
+
+### Atalho
+
+C-n, c
+
 
 
 **Referências**
