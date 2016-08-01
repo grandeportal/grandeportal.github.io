@@ -432,13 +432,90 @@ if who | grep regis; then echo regis está logado; else echo echo regis não est
 if test -e $1; then cat $1; else echo Arquivo não encontrado; fi
 
 # Verifica se uma pasta existe
-if [ ! -d pasta17 ]; then echo 'Pasta não existe'; else echo 'Pasta já existe, veja:'; ls; fi
+if [ ! -d pasta42 ]; then echo 'Pasta não existe'; else echo 'Pasta já existe, veja:'; ls; fi
 
-c = 0; while [[ c -le 10 ]]; do echo "$c"; (( c++ )); sleep 0.5; done
+n1=1
+n2=2
+if [ $n1 -eq $n2 ]
+then
+    echo "n1 é igual a n2"
+else
+    echo "n1 é diferente de n2"
+fi
+
+n1=1
+n2=2
+if [ $n1 -ne $n2 ]
+then
+    echo "n1 é diferente de n2"
+else
+    echo "n1 é igual a n2"
+fi
+
+
+c=0; while [[ c -le 10 ]]; do echo "$c"; (( c++ )); sleep 0.5; done
+
+### Fibonacci Series
+
+```bash
+#!/bin/bash
+c=0
+a=1
+b=1
+read -p "Enter limit of fibonacci Series:" n
+echo -n "$a "
+echo -n "$b "
+#Fibonacci series logic
+while((c<n))
+do
+    c=$((a+b))
+    echo -n "$c "
+    a=$b
+    b=$c
+done
+echo -e "\n"
+```
+
+
 
 for i in $(seq 10); do echo "$i"; sleep 0.5; done
 
-# Criando vários arquivos com um texto aleatório
+
+itens="Um Dois Três Quatro Cinco"
+for item in $itens; do echo $item; done
+
+
+
+for ((i=1; i<=9; i++))
+do
+    echo -n "$i "
+done
+echo ""
+
+
+
+## Entrada de dados
+
+read -p "Digite seu nome: " nome; echo "Bem-vindo $nome"
+
+
+## Função
+
+```bash
+#!/bin/bash
+
+soma(){
+    a=$1
+    b=$2
+    echo `expr $a + $b`
+}
+
+read -p 'Digite um número: ' x
+read -p 'Digite outro número: ' y
+soma $x $y
+```
+
+## Criando vários arquivos com um texto aleatório
 
 $ sudo apt-get install gpw
 for i in $(seq 1 10); do echo "text$i" > file$i.txt; gpw 7 10 >> file$i.txt; done
@@ -448,14 +525,140 @@ for i in $(seq 1 10); do echo "text$i" > file$i.txt; gpw 7 10 >> file$i.txt; don
 for i in $(seq 1 10); do cat file$i.txt >> finalfile.txt; done
 
 
-## Shell Script e Python
+## Juntando vários arquivos em um só
+
+```bash
+arqs="um.txt dois.txt"
+for i in $arqs; do cat $i >> joinedfile.txt; done
+```
+
+```bash
+arqs="um.txt dois.txt"
+cat $arqs > joinedfile.txt
+cat joinedfile.txt
+```
 
 
+## Separando um arquivo em vários linha a linha
+
+```bash
+printf '%s\n' 'Um' 'Dois' 'Três' 'Quatro' 'Cinco' > file.txt
+
+# ou
+
+itens="Um Dois Três Quatro Cinco"; for item in $itens; do echo $item >> file.txt; done
+
+# Separando
+while read line; do line=${line}; echo "${line}" > "${line}"; done < file.txt
+
+# lendo
+while read line; do cat "${line}"; done < file.txt
+```
+
+## Renomeando todos os arquivos numa sequência numérica
+
+```bash
+# Criando 30 arquivos com nomes aleatórios
+for i in $(seq 1 30); do var=`gpw 1 10`; touch $var.txt; done
+# Renomenando tudo numericamente
+c=0; j=1; for i in *; do ((c++)); if (($c <= 9)); then mv $i 0$j\_$i; else mv $i $j\_$i; fi; ((j++)); done
+```
 
 
 ## Numerar Linhas
 
 
+## Alterando o prompt
+
+```bash
+PS1="$ "
+```
+
+```bash
+PS1="\e[1;34m/\W\e[00m$ "
+```
+
+grandeportal.github.io
+
+
+## Renomeando comandos
+
+```bash
+vim ~/.bash_profile
+```
+
+```bash
+alias rm='rm -i'
+```
+
+```bash
+vim ~/.bashrc
+```
+
+```bash
+source ~/.bash_profile
+```
+
+grandeportal.github.io
+
+
+## 
+
+
+## 
+
+## Shell Script to print Pyramid of Numbers
+
+```bash
+#!/bin/bash
+
+#Taking input
+read -p "Enter Number:" number
+
+#Outer loop for printing number of rows in pyramid
+for((row=1;row<=number;row++))
+do
+
+    #Loop for printing required spaces
+    for((spaces=row;spaces<=number;spaces++))
+    do
+        echo -ne " "
+    done
+
+    #Loop for printing 1st part
+    for((j=1;j<=row;j++))
+    do
+        echo -ne "$j"
+    done
+
+    #Loop for printing 2nd part
+    for((l=(row-1);l>=1;l--))
+    do
+        echo -ne "$l"
+    done
+
+    #echo for printing new line
+    echo 
+done
+```
+
+http://technicalworldforyou.blogspot.com.br/2014/01/shell-script-to-print-pyramid-of-numbers.html
+
+
+## Shell Script e Python
+
+
+
+
+
+
+
+
+
+
+
+
+http://technicalworldforyou.blogspot.com.br/
 
 [0]: 
 [1]: 
