@@ -49,7 +49,7 @@ O Vim funciona da seguinte forma:
 
 Para entrar no modo de edição digite um dos comandos a seguir.
 
-Para sair do modo de edição e voltar para o modo normal pressione ESC`.
+Para sair do modo de edição e voltar para o modo normal pressione `ESC`.
 
 
 ## Edição
