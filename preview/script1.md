@@ -75,7 +75,9 @@ PS1="$ "
 
 > Para todos os comandos digite `--help`.
 
+```bash
 $ <comando> --help
+```
 
 ## Arquivos e Diretórios
 
@@ -418,22 +420,37 @@ echo azul{' claro',' escuro'}
 
 # Shell Script 2 - Estruturas de Controle
 
+```bash
 seq 10
+```
 
+```bash
 seq 2 2 10
+```
 
+```bash
 mkdir pasta; touch pasta/arquivo.txt; cd pasta; ls
+```
 
+```bash
 if grep mm /etc/passwd; then echo 'ok'; else echo 'não'; fi
+```
 
+```bash
 if who | grep regis; then echo regis está logado; else echo echo regis não está; fi
+```
 
+```bash
 # Verifica se o arquivo existe
 if test -e $1; then cat $1; else echo Arquivo não encontrado; fi
+```
 
+```bash
 # Verifica se uma pasta existe
 if [ ! -d pasta42 ]; then echo 'Pasta não existe'; else echo 'Pasta já existe, veja:'; ls; fi
+```
 
+```bash
 n1=1
 n2=2
 if [ $n1 -eq $n2 ]
@@ -442,7 +459,9 @@ then
 else
     echo "n1 é diferente de n2"
 fi
+```
 
+```bash
 n1=1
 n2=2
 if [ $n1 -ne $n2 ]
@@ -451,9 +470,12 @@ then
 else
     echo "n1 é igual a n2"
 fi
+```
 
 
+```bash
 c=0; while [[ c -le 10 ]]; do echo "$c"; (( c++ )); sleep 0.5; done
+```
 
 ### Fibonacci Series
 
@@ -476,27 +498,40 @@ done
 echo -e "\n"
 ```
 
+## For
 
-
+```bash
 for i in $(seq 10); do echo "$i"; sleep 0.5; done
+```
 
 
+```bash
 itens="Um Dois Três Quatro Cinco"
 for item in $itens; do echo $item; done
+```
 
 
 
+```bash
 for ((i=1; i<=9; i++))
 do
     echo -n "$i "
 done
 echo ""
+```
 
+### Executando uma ação n vezes
+
+```bash
+for i in $(seq 10); do touch file$i.txt; done
+```
 
 
 ## Entrada de dados
 
+```bash
 read -p "Digite seu nome: " nome; echo "Bem-vindo $nome"
+```
 
 
 ## Função
@@ -517,12 +552,16 @@ soma $x $y
 
 ## Criando vários arquivos com um texto aleatório
 
+```bash
 $ sudo apt-get install gpw
 for i in $(seq 1 10); do echo "text$i" > file$i.txt; gpw 7 10 >> file$i.txt; done
+```
 
 # Inserindo o conteúdo de vários arquivos dentro de um único arquivo
 
+```bash
 for i in $(seq 1 10); do cat file$i.txt >> finalfile.txt; done
+```
 
 
 ## Juntando vários arquivos em um só
@@ -543,17 +582,33 @@ cat joinedfile.txt
 
 ```bash
 printf '%s\n' 'Um' 'Dois' 'Três' 'Quatro' 'Cinco' > file.txt
-
 # ou
-
 itens="Um Dois Três Quatro Cinco"; for item in $itens; do echo $item >> file.txt; done
 
 # Separando
 while read line; do line=${line}; echo "${line}" > "${line}"; done < file.txt
 
-# lendo
+# Lendo
 while read line; do cat "${line}"; done < file.txt
 ```
+
+
+## Separando um arquivo em vários linha a linha com a seguinte regra...
+
+```bash
+SECRET_KEY=apqoie38728cmx8s67xs
+ALLOW_HOST=127.0.0.1
+```
+
+```bash
+$ cat SECRET_KEY
+apqoie38728cmx8s67xs
+$ cat ALLOW_HOST
+127.0.0.1
+```
+
+http://bit.ly/2awZo0d
+
 
 ## Renomeando todos os arquivos numa sequência numérica
 
@@ -566,6 +621,22 @@ c=0; j=1; for i in *; do ((c++)); if (($c <= 9)); then mv $i 0$j\_$i; else mv $i
 
 
 ## Numerar Linhas
+
+```bash
+sed -n "/pattern/{=;p}" arquivo
+```
+
+```bash
+sed -n "/*/{=;p}" arquivo.txt | sed "{N;s/\n/ /}" > arquivo2.txt
+```
+
+```bash
+cat -n arquivo.txt > arquivo2.txt
+```
+
+```bash
+awk '{printf("%5d: %s\n", NR,$0)}' arquivo.txt > arquivo2.txt
+```
 
 
 ## Alterando o prompt
@@ -602,10 +673,16 @@ source ~/.bash_profile
 grandeportal.github.io
 
 
-## 
+## Substituindo texto no arquivo sem abri-lo
+
+```bash
+echo "Eu gosto de Java." > linguagens.txt
+cat linguagens.txt
+sed -i "s/Java/Python/g" linguagens.txt
+cat linguagens.txt
+```
 
 
-## 
 
 ## Shell Script to print Pyramid of Numbers
 
@@ -647,16 +724,39 @@ http://technicalworldforyou.blogspot.com.br/2014/01/shell-script-to-print-pyrami
 
 ## Shell Script e Python
 
+```python
+import subprocess
+subprocess.call("clear", shell=True)
+subprocess.call("echo 'Usando Shell Script e Python'", shell=True)
+subprocess.call("ls -l", shell=True)
+```
+
+https://docs.python.org/3/library/subprocess.html
+
+http://www.jperla.com/blog/post/a-clean-python-shell-script
 
 
 
+## Street Fighter Sounds
 
 
-
-
-
-
-
+```bash
+# Street Fighter
+c=1
+while [[ c -le 6 ]]
+do
+    if [ $c -le 3 ]; then
+        mplayer ~/sounds/hadoken.mp3
+    elif [ $c -eq 4 ]; then
+        mplayer ~/sounds/shouryuken.mp3
+    elif [ $c -eq 5 ]; then
+        mplayer ~/sounds/tatsumaki_senpukyaku.mp3
+    else
+        mplayer ~/sounds/youwin_perfect.mp3
+    fi
+    (( c++ ))
+done
+```
 
 http://technicalworldforyou.blogspot.com.br/
 
