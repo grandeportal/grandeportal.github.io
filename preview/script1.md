@@ -736,7 +736,6 @@ https://docs.python.org/3/library/subprocess.html
 http://www.jperla.com/blog/post/a-clean-python-shell-script
 
 
-
 ## Street Fighter Sounds
 
 
@@ -757,6 +756,39 @@ do
     (( c++ ))
 done
 ```
+
+## Funny
+
+```bash
+sl
+```
+
+```bash
+cmatrix
+```
+
+```bash
+figlet Grupy-S
+```
+
+```bash
+sudo apt-get install libaa-bin
+aafire
+```
+
+```bash
+sudo apt-get install bsdgames
+worm
+```
+
+
+
+
+
+
+
+
+
 
 http://technicalworldforyou.blogspot.com.br/
 
