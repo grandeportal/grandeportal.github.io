@@ -766,7 +766,7 @@ cmatrix
 ```
 
 ```bash
-figlet Grupy-S
+figlet Grupy-SP
 ```
 
 ```bash
