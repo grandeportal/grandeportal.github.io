@@ -2,12 +2,10 @@
 
 Você já leu o [Papo de Botequim][4] por Julio Cezar Neves? Se não, eu sugiro que leia, pois é um excelente material sobre [Shell Script][5]. Lá ele explica, dentre outras coisas, a diferença entre Bash e Shell. Bom, aqui eu vou mostrar apenas os comandos que eu considero mais relevantes, mas não deixe de ler o [Papo de Botequim][4].
 
-> Esta é a parte 1/3 da série de artigos sobre Shell Script.
-
 
 ## A caixa de ferramentas do shelleiro
 
-O [Canivete Suíço do Shell (Bash)][0] do [Aurélio Marinho Jargas][1] é o guia de referência de quem quer aprender Shell Script. E por isso vou reproduzir aqui os comandos que ele menciona em [][3].
+O [Canivete Suíço do Shell (Bash)][0] do [Aurélio Marinho Jargas][1] é o guia de referência de quem quer aprender Shell Script. E por isso vou reproduzir aqui os comandos que ele menciona em "[A caixa de ferramentas do shelleiro][3]".
 
 | Comando   | Função                | Opções úteis                             |
 |-----------|-----------------------|------------------------------------------|
@@ -387,7 +385,7 @@ $ grep --count
 
 
 
-Falar do echo
+### echo
 
 ```bash
 echo {2..10}
@@ -649,7 +647,7 @@ PS1="$ "
 PS1="\e[1;34m/\W\e[00m$ "
 ```
 
-grandeportal.github.io
+http://grandeportal.github.io/terminal/2016/alterando-o-prompt-do-terminal/
 
 
 ## Renomeando comandos
@@ -670,7 +668,7 @@ vim ~/.bashrc
 source ~/.bash_profile
 ```
 
-grandeportal.github.io
+http://grandeportal.github.io/terminal,%20alias/2016/renomeando-comandos/
 
 
 ## Substituindo texto no arquivo sem abri-lo
@@ -792,13 +790,13 @@ worm
 
 http://technicalworldforyou.blogspot.com.br/
 
-[0]: 
-[1]: 
+[0]: http://aurelio.net/shell/canivete/
+[1]: http://aurelio.net/
 [2]: 
-[3]: 
-[4]: 
-[5]: 
-[6]: 
+[3]: http://aurelio.net/shell/canivete/#ferramentas
+[4]: https://jneves.wordpress.com/2008/03/05/papo-de-botequim-parte-1/
+[5]: http://wiki.softwarelivre.org/TWikiBar/WebHome
+[6]: http://grandeportal.github.io/terminal/2016/alterando-o-prompt-do-terminal/
 [7]: 
 [8]: 
 [9]: 
