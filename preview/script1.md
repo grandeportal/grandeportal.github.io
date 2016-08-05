@@ -792,12 +792,7 @@ http://technicalworldforyou.blogspot.com.br/
 
 [0]: http://aurelio.net/shell/canivete/
 [1]: http://aurelio.net/
-[2]: 
 [3]: http://aurelio.net/shell/canivete/#ferramentas
 [4]: https://jneves.wordpress.com/2008/03/05/papo-de-botequim-parte-1/
 [5]: http://wiki.softwarelivre.org/TWikiBar/WebHome
 [6]: http://grandeportal.github.io/terminal/2016/alterando-o-prompt-do-terminal/
-[7]: 
-[8]: 
-[9]: 
-[10]: 
