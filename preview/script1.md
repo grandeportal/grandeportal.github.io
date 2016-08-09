@@ -790,6 +790,8 @@ worm
 
 http://technicalworldforyou.blogspot.com.br/
 
+http://rberaldo.com.br/curso-de-shell-script-modulo-1-scripts-shell-estruturas/
+
 [0]: http://aurelio.net/shell/canivete/
 [1]: http://aurelio.net/
 [3]: http://aurelio.net/shell/canivete/#ferramentas
