@@ -122,3 +122,10 @@ https://github.com/squ1b3r/Djaneiro
 
 #### Markmon real-time markdown preview
 
+
+#### Inserir data
+
+http://kevinmorey.com/post/84828796419/insert-current-timestamp-into-sublime-text
+
+https://gist.github.com/kmorey/11389657
+
