@@ -2,6 +2,9 @@
 
 Você já leu o [Papo de Botequim][4] por Julio Cezar Neves? Se não, eu sugiro que leia, pois é um excelente material sobre [Shell Script][5]. Lá ele explica, dentre outras coisas, a diferença entre Bash e Shell. Bom, aqui eu vou mostrar apenas os comandos que eu considero mais relevantes, mas não deixe de ler o [Papo de Botequim][4].
 
+## O que é Bash e Shell Script?
+
+[Bash][2] é o **interpretador** e [Shell Script][7] é a linguagem.
 
 ## A caixa de ferramentas do shelleiro
 
@@ -45,7 +48,7 @@ Antes de sair explorando "A caixa de ferramentas do shelleiro", vamos começar d
 
 Para abrir o terminal você pode pressionar Ctrl+Alt+T.
 
-![terminal]()
+![terminal](../images/terminal.png)
 
 O `$` é o prompt do comando, ou seja, a partir deste símbolo você pode digitar seus comandos.
 
@@ -69,7 +72,8 @@ Esta é a configuração padrão do prompt de comando do terminal, mas se quiser
 PS1="$ "
 ```
 
-![terminal]()
+![terminal](../images/terminal_ps1.png)
+
 
 > Para todos os comandos digite `--help`.
 
@@ -156,7 +160,7 @@ No exemplo, `.env` é um arquivo oculto.
 Experimente
 
 ```bash
-ls -lh
+$ ls -lh
 ```
 
 ### Visualizando os arquivos numa árvore
@@ -388,6 +392,12 @@ $ grep --count
 ### echo
 
 ```bash
+echo "Hello World"
+```
+
+Experimente
+
+```bash
 echo {2..10}
 echo {a..Z}
 ```
@@ -396,27 +406,22 @@ echo {a..Z}
 echo azul{' claro',' escuro'}
 ```
 
-\t
+#### Tabulação
 
-\n
+```bash
+printf "Um\tDois"
+```
 
+#### Quebra de linha
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+```bash
+printf "Um\nDois"
+```
 
 
 # Shell Script 2 - Estruturas de Controle
+
+Não vou explicar muito, apenas digite e veja o que acontece ;)
 
 ```bash
 seq 10
@@ -435,13 +440,17 @@ if grep mm /etc/passwd; then echo 'ok'; else echo 'não'; fi
 ```
 
 ```bash
-if who | grep regis; then echo regis está logado; else echo echo regis não está; fi
+if who | grep regis; then echo regis está logado; else echo regis não está logado; fi
 ```
+
+A seguir, usaremos o comando `test` para verificar se um arquivo existe.
 
 ```bash
 # Verifica se o arquivo existe
 if test -e $1; then cat $1; else echo Arquivo não encontrado; fi
 ```
+
+Repare, no exemplo a seguir, que podemos substituir o comando `test` por um par de colchetes `[ ]`.
 
 ```bash
 # Verifica se uma pasta existe
@@ -495,6 +504,8 @@ do
 done
 echo -e "\n"
 ```
+
+`$((a+b))` significa uma expansão aritmética.
 
 ## For
 
@@ -555,7 +566,7 @@ $ sudo apt-get install gpw
 for i in $(seq 1 10); do echo "text$i" > file$i.txt; gpw 7 10 >> file$i.txt; done
 ```
 
-# Inserindo o conteúdo de vários arquivos dentro de um único arquivo
+## Inserindo o conteúdo de vários arquivos dentro de um único arquivo
 
 ```bash
 for i in $(seq 1 10); do cat file$i.txt >> finalfile.txt; done
@@ -606,6 +617,15 @@ $ cat ALLOW_HOST
 ```
 
 http://bit.ly/2awZo0d
+
+## Substituindo texto no arquivo sem abri-lo
+
+```bash
+echo "Eu gosto de Java." > linguagens.txt
+cat linguagens.txt
+sed -i "s/Java/Python/g" linguagens.txt
+cat linguagens.txt
+```
 
 
 ## Renomeando todos os arquivos numa sequência numérica
@@ -671,14 +691,6 @@ source ~/.bash_profile
 http://grandeportal.github.io/terminal,%20alias/2016/renomeando-comandos/
 
 
-## Substituindo texto no arquivo sem abri-lo
-
-```bash
-echo "Eu gosto de Java." > linguagens.txt
-cat linguagens.txt
-sed -i "s/Java/Python/g" linguagens.txt
-cat linguagens.txt
-```
 
 
 
@@ -780,21 +792,17 @@ worm
 ```
 
 
-
-
-
-
-
-
-
-
 http://technicalworldforyou.blogspot.com.br/
 
 http://rberaldo.com.br/curso-de-shell-script-modulo-1-scripts-shell-estruturas/
 
+
+
 [0]: http://aurelio.net/shell/canivete/
 [1]: http://aurelio.net/
+[2]: https://pt.wikipedia.org/wiki/Bash
 [3]: http://aurelio.net/shell/canivete/#ferramentas
 [4]: https://jneves.wordpress.com/2008/03/05/papo-de-botequim-parte-1/
 [5]: http://wiki.softwarelivre.org/TWikiBar/WebHome
 [6]: http://grandeportal.github.io/terminal/2016/alterando-o-prompt-do-terminal/
+[7]: https://pt.wikipedia.org/wiki/Shell_script
