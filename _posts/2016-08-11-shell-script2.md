@@ -7,6 +7,8 @@ comments:   true
 
 # Shell Script 2 - Estruturas de Controle
 
+Se você já leu [o básico sobre Shell Script][9] agora veremos as estruturas de controle do Shell Script.
+
 Não vou explicar muito, apenas digite e veja o que acontece ;)
 
 {% highlight bash %}
@@ -145,7 +147,7 @@ read -p 'Digite outro número: ' y
 soma $x $y
 {% endhighlight %}
 
-
+Leia mais em [Shell Script 3 - Vários exemplos][8]
 
 
 [0]: http://aurelio.net/shell/canivete/
@@ -156,3 +158,5 @@ soma $x $y
 [5]: http://wiki.softwarelivre.org/TWikiBar/WebHome
 [6]: http://grandeportal.github.io/terminal/2016/alterando-o-prompt-do-terminal/
 [7]: https://pt.wikipedia.org/wiki/Shell_script
+[8]: http://grandeportal.github.io/shell/2016/shell-script3/
+[9]: http://grandeportal.github.io/shell/2016/shell-script1/

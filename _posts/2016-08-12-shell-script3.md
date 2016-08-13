@@ -7,21 +7,23 @@ comments:   true
 
 # Shell Script 3 - Vários exemplos
 
-## Criando vários arquivos com um texto aleatório
+Já leu [Shell Script 2 - Estruturas de Controle][8]? Então veremos um bocado de exemplos interessantes.
+
+### Criando vários arquivos com um texto aleatório
 
 {% highlight bash %}
 $ sudo apt-get install gpw
 for i in $(seq 1 10); do echo "text$i" > file$i.txt; gpw 7 10 >> file$i.txt; done
 {% endhighlight %}
 
-## Inserindo o conteúdo de vários arquivos dentro de um único arquivo
+### Inserindo o conteúdo de vários arquivos dentro de um único arquivo
 
 {% highlight bash %}
 for i in $(seq 1 10); do cat file$i.txt >> finalfile.txt; done
 {% endhighlight %}
 
 
-## Juntando vários arquivos em um só
+### Juntando vários arquivos em um só
 
 {% highlight bash %}
 arqs="um.txt dois.txt"
@@ -35,7 +37,7 @@ cat joinedfile.txt
 {% endhighlight %}
 
 
-## Separando um arquivo em vários linha a linha
+### Separando um arquivo em vários linha a linha
 
 {% highlight bash %}
 printf '%s\n' 'Um' 'Dois' 'Três' 'Quatro' 'Cinco' > file.txt
@@ -50,7 +52,7 @@ while read line; do cat "${line}"; done < file.txt
 {% endhighlight %}
 
 
-## Separando um arquivo em vários linha a linha com a seguinte regra...
+### Separando um arquivo em vários linha a linha com a seguinte regra...
 
 {% highlight bash %}
 SECRET_KEY=apqoie38728cmx8s67xs
@@ -66,7 +68,7 @@ $ cat ALLOW_HOST
 
 http://bit.ly/2awZo0d
 
-## Substituindo texto no arquivo sem abri-lo
+### Substituindo texto no arquivo sem abri-lo
 
 {% highlight bash %}
 echo "Eu gosto de Java." > linguagens.txt
@@ -76,7 +78,7 @@ cat linguagens.txt
 {% endhighlight %}
 
 
-## Renomeando todos os arquivos numa sequência numérica
+### Renomeando todos os arquivos numa sequência numérica
 
 {% highlight bash %}
 # Criando 30 arquivos com nomes aleatórios
@@ -86,7 +88,7 @@ c=0; j=1; for i in *; do ((c++)); if (($c <= 9)); then mv $i 0$j\_$i; else mv $i
 {% endhighlight %}
 
 
-## Numerar Linhas
+### Numerar Linhas
 
 {% highlight bash %}
 sed -n "/pattern/{=;p}" arquivo
@@ -105,44 +107,7 @@ awk '{printf("%5d: %s\n", NR,$0)}' arquivo.txt > arquivo2.txt
 {% endhighlight %}
 
 
-## Alterando o prompt
-
-{% highlight bash %}
-PS1="$ "
-{% endhighlight %}
-
-{% highlight bash %}
-PS1="\e[1;34m/\W\e[00m$ "
-{% endhighlight %}
-
-http://grandeportal.github.io/terminal/2016/alterando-o-prompt-do-terminal/
-
-
-## Renomeando comandos
-
-{% highlight bash %}
-vim ~/.bash_profile
-{% endhighlight %}
-
-{% highlight bash %}
-alias rm='rm -i'
-{% endhighlight %}
-
-{% highlight bash %}
-vim ~/.bashrc
-{% endhighlight %}
-
-{% highlight bash %}
-source ~/.bash_profile
-{% endhighlight %}
-
-http://grandeportal.github.io/terminal,%20alias/2016/renomeando-comandos/
-
-
-
-
-
-## Shell Script to print Pyramid of Numbers
+### Shell Script to print Pyramid of Numbers
 
 {% highlight bash %}
 #!/bin/bash
@@ -179,11 +144,11 @@ done
 
 Leia mais:
 
-http://technicalworldforyou.blogspot.com.br/2014/01/shell-script-to-print-pyramid-of-numbers.html
+technicalworldforyou.blogspot.com.br/2014/01/shell-script-to-print-pyramid-of-numbers.html
 
-http://technicalworldforyou.blogspot.com.br/
+technicalworldforyou.blogspot.com.br/
 
-http://rberaldo.com.br/curso-de-shell-script-modulo-1-scripts-shell-estruturas/
+rberaldo.com.br/curso-de-shell-script-modulo-1-scripts-shell-estruturas/
 
 
 
@@ -195,3 +160,4 @@ http://rberaldo.com.br/curso-de-shell-script-modulo-1-scripts-shell-estruturas/
 [5]: http://wiki.softwarelivre.org/TWikiBar/WebHome
 [6]: http://grandeportal.github.io/terminal/2016/alterando-o-prompt-do-terminal/
 [7]: https://pt.wikipedia.org/wiki/Shell_script
+[8]: http://grandeportal.github.io/shell/2016/shell-script2/

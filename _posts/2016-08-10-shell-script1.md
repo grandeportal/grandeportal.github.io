@@ -426,7 +426,7 @@ printf "Um\tDois"
 printf "Um\nDois"
 {% endhighlight %}
 
-
+Leia mais em [Shell Script 2 - Estruturas de Controle][8]
 
 
 [0]: http://aurelio.net/shell/canivete/
@@ -437,3 +437,4 @@ printf "Um\nDois"
 [5]: http://wiki.softwarelivre.org/TWikiBar/WebHome
 [6]: http://grandeportal.github.io/terminal/2016/alterando-o-prompt-do-terminal/
 [7]: https://pt.wikipedia.org/wiki/Shell_script
+[8]: http://grandeportal.github.io/shell/2016/shell-script2/
