@@ -14,11 +14,7 @@
 * Cuidado com os comandos perigosos do Shell - OK
 * Processos no Linux - OK
 
-* Touch, Cat, Less, Head, Tail
-    Redirecionamento da Saída Padrão
-        Redirecionamento Perigoso
-
-* Shell Script 1 - O Básico;
+* Shell Script 1 - O Básico; - OK
     http://promo.visie.com.br/curso-terminal;
     ls, ls -l, ls -la
     cp
@@ -29,13 +25,15 @@
 
     Numerando várias linhas de um arquivo de texto
 
-* Shell Script 2 - Estruturas de Controle
+* Shell Script 2 - Estruturas de Controle - OK
     if
     while
     for
 
-* Shell Script 3 - Programando um pouco
+* Shell Script 3 - Programando um pouco - OK
     a festa
+
+* Shell Script e Python - OK
 
 * Substituindo texto em vários arquivos
 * Sed e Awk
