@@ -281,19 +281,13 @@ Conta o número de linhas não vazias do arquivo.
 
 Experimente:
 
-{% highlight bash %}
+{% highlight console %}
 cat << EOF > arquivo.txt
-
 > Z
-
 > X
-
 > C
-
 > B
-
 > A
-
 > EOF
 {% endhighlight %}
 
