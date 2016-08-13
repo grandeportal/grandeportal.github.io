@@ -66,7 +66,7 @@ usuario@maquina:caminho$
 
 E `~` é a pasta principal, a pasta `home` do usuário atual.
 
-Esta é a configuração padrão do prompt de comando do terminal, mas se quiser, você pode mudar digitando
+Esta é a configuração padrão do prompt de comando do terminal, mas se quiser, você pode mudar digitando, por exemplo.
 
 ```bash
 PS1="$ "
@@ -201,6 +201,8 @@ $ rm -rf \*
 ```
 
 Este comando **anula** o efeito excluir tudo.
+
+Leia mais em [cuidado com comandos perigosos do shell](http://grandeportal.github.io/shell/2016/cuidado-com-comandos-perigosos-do-shell/).
 
 
 ### Copiando arquivos
