@@ -281,7 +281,7 @@ Conta o número de linhas não vazias do arquivo.
 
 Experimente:
 
-{% highlight console %}
+{% highlight c %}
 cat << EOF > arquivo.txt
 > Z
 > X
