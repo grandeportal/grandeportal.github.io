@@ -66,7 +66,7 @@ $ cat ALLOW_HOST
 127.0.0.1
 {% endhighlight %}
 
-http://bit.ly/2awZo0d
+[http://bit.ly/2awZo0d](http://bit.ly/2awZo0d)
 
 ### Substituindo texto no arquivo sem abri-lo
 
@@ -144,11 +144,11 @@ done
 
 Leia mais:
 
-technicalworldforyou.blogspot.com.br/2014/01/shell-script-to-print-pyramid-of-numbers.html
+[http://technicalworldforyou.blogspot.com.br/2014/01/shell-script-to-print-pyramid-of-numbers.html](http://technicalworldforyou.blogspot.com.br/2014/01/shell-script-to-print-pyramid-of-numbers.html)
 
-technicalworldforyou.blogspot.com.br/
+[http://technicalworldforyou.blogspot.com.br/](http://technicalworldforyou.blogspot.com.br/)
 
-rberaldo.com.br/curso-de-shell-script-modulo-1-scripts-shell-estruturas/
+[http://rberaldo.com.br/curso-de-shell-script-modulo-1-scripts-shell-estruturas/](http://rberaldo.com.br/curso-de-shell-script-modulo-1-scripts-shell-estruturas/)
 
 
 
