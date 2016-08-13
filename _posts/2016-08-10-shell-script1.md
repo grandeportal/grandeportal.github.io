@@ -283,12 +283,12 @@ Experimente:
 
 {% highlight c %}
 cat << EOF > arquivo.txt
-> Z
-> X
-> C
-> B
-> A
-> EOF
+Z
+X
+C
+B
+A
+EOF
 {% endhighlight %}
 
 Depois
