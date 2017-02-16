@@ -1,4 +1,11 @@
-Sublime Text 3
+---
+layout:     post
+title:      "Sublime Text 3"
+category:   editor de texto
+comments:   true
+---
+
+# Sublime Text 3
 
 Existem vários editores de texto, e cada um usa aquele que gosta, que se sente mais confortável. Dessa vez eu escolhi o [Sublime Text 3][0].
 
@@ -8,10 +15,10 @@ Eu gosto dele porque existem vários plugins que aumentam muito a minha produtiv
 
 ## Teclas de atalho
 
-```
+{% highlight js %}
 { "keys": ["ctrl+k", "ctrl+u"], "command": "upper_case" },
 { "keys": ["ctrl+k", "ctrl+l"], "command": "lower_case" },
-```
+{% endhighlight %}
 
 ## Configurando as preferências
 
@@ -19,7 +26,7 @@ Eu gosto dele porque existem vários plugins que aumentam muito a minha produtiv
 
 *Preferences.sublime-settings*
 
-```
+{% highlight js %}
 {
     "bold_folder_labels": true,
     "draw_white_space": "all",
@@ -33,7 +40,7 @@ Eu gosto dele porque existem vários plugins que aumentam muito a minha produtiv
     "tab_size": 4,
     "translate_tabs_to_spaces": true
 }
-```
+{% endhighlight %}
 
 
 ## Configurando algumas teclas de atalho
@@ -42,7 +49,7 @@ Eu gosto dele porque existem vários plugins que aumentam muito a minha produtiv
 
 *Default (Linux).sublime-keymap*
 
-```
+{% highlight js %}
 [
     { "keys": ["f9"], "command": "aluguel" },
     { "keys": ["ctrl+0"], "command": "reset_font_size" },
@@ -56,7 +63,7 @@ Eu gosto dele porque existem vários plugins que aumentam muito a minha produtiv
     { "keys": ["ctrl+shift+9"], "command": "toggle_comment", "args": { "block": true } },
     { "keys": ["ctrl+k", "ctrl+t"], "command": "title_case" },
 ]
-```
+{% endhighlight %}
 
 ## Completions
 
@@ -64,18 +71,18 @@ Clique em `Preferences > Browse Packages...`
 
 Crie um novo arquivo dentro desta pasta e salve como `email.sublime-completions`.
 
-```
+{% highlight js %}
 {
     "completions":
     [
         { "trigger": "html", "contents": "<html>\n\t<body>\n\t\t<h1>$1</h1>\n\t\t<p>$0</p>\n\t</body>\n</html>"},
     ]
 }
-```
+{% endhighlight %}
 
 ## Snippets
 
-```
+{% highlight js %}
 <snippet>
     <content><![CDATA[
 Nome: ${1:seu_nome}
@@ -87,8 +94,7 @@ Descrição ${3:Lorem ipsum dolor sit amet.}
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.python</scope> -->
 </snippet>
-
-```
+{% endhighlight %}
 
 ## Configurando o Package Control
 
@@ -107,9 +113,9 @@ Após a atualização pressione `CTRL+SHIFT+P` e digite *Install Package*.
 
 PythonPEP8 Autoformat
 
-```
+{% highlight js %}
 "autoformat_on_save": true,
-```
+{% endhighlight %}
 
 #### Emmet
 
