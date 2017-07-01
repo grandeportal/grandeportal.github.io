@@ -1,20 +1,20 @@
-* Apresentação - OK
-* Comunidades e Eventos - OK
-* I Love Linux - OK
-* Recuperando o GRUB - OK
-* Editando o GRUB - OK
-* Terminator - OK
-* Terminal com Texto Colorido - OK
-* Alterando o Prompt do Terminal - OK
-* Renomeando Comandos - OK
-* Time - OK
-* Download com Wget - OK
-* Descompactando arquivos pelo terminal - OK
-* Copiando pelo terminal com xclip - OK
-* Cuidado com os comandos perigosos do Shell - OK
-* Processos no Linux - OK
+* [X] Apresentação
+* [X] Comunidades e Eventos
+* [X] I Love Linux
+* [X] Recuperando o GRUB
+* [X] Editando o GRUB
+* [X] Terminator
+* [X] Terminal com Texto Colorido
+* [X] Alterando o Prompt do Terminal
+* [X] Renomeando Comandos
+* [X] Time
+* [X] Download com Wget
+* [X] Descompactando arquivos pelo terminal
+* [X] Copiando pelo terminal com xclip
+* [X] Cuidado com os comandos perigosos do Shell
+* [X] Processos no Linux
 
-* Shell Script 1 - O Básico; - OK
+* [X] Shell Script 1 - O Básico;
     http://promo.visie.com.br/curso-terminal;
     ls, ls -l, ls -la
     cp
@@ -25,20 +25,20 @@
 
     Numerando várias linhas de um arquivo de texto
 
-* Shell Script 2 - Estruturas de Controle - OK
+* [X] Shell Script 2 - Estruturas de Controle
     if
     while
     for
 
-* Shell Script 3 - Programando um pouco - OK
+* [X] Shell Script 3 - Programando um pouco
     a festa
 
-* Shell Script e Python - OK
+* [X] Shell Script e Python
 
 * Substituindo texto em vários arquivos
 * Sed e Awk
-* Vim
-* Sublime Text
+* [X] Vim
+* [X] Sublime Text
 * Atom
 * xmacro
 * xdotool
