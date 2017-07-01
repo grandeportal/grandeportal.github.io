@@ -46,7 +46,7 @@
 
 * [X] Shell Script e Python
 
-* Substituindo texto em vários arquivos
+* [X] Substituindo texto em vários arquivos
 * Sed e Awk
 * [X] Vim
 * [X] Sublime Text
