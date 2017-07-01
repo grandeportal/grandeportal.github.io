@@ -15,22 +15,33 @@
 * [X] Processos no Linux
 
 * [X] Shell Script 1 - O Básico;
+
     http://promo.visie.com.br/curso-terminal;
+
     ls, ls -l, ls -la
+
     cp
+
     mv
+
     rm, rm -i, rm -rf
+
     source script.sh
+
     ./script.sh
 
     Numerando várias linhas de um arquivo de texto
 
 * [X] Shell Script 2 - Estruturas de Controle
+
     if
+
     while
+
     for
 
 * [X] Shell Script 3 - Programando um pouco
+
     a festa
 
 * [X] Shell Script e Python
